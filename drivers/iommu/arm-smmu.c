@@ -455,7 +455,10 @@ static struct arm_smmu_option_prop arm_smmu_options[] = {
 	{ ARM_SMMU_OPT_STATIC_CB, "qcom,enable-static-cb"},
 	{ ARM_SMMU_OPT_DISABLE_ATOS, "qcom,disable-atos" },
 	{ ARM_SMMU_OPT_NO_DYNAMIC_ASID, "qcom,no-dynamic-asid" },
+<<<<<<< HEAD
 	{ ARM_SMMU_OPT_HALT, "qcom,enable-smmu-halt"},
+=======
+>>>>>>> 623230f790da... iommu: arm-smmu: add option to skip AARCH64 context format probe
 	{ ARM_SMMU_OPT_NO_AARCH64, "qcom,no-aarch64"},
 	{ 0, NULL},
 };
