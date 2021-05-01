@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+/* Copyright (c) 2018, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 &mdss_mdp {
 	dsi_truly_720_cmd: qcom,mdss_dsi_truly_720p_cmd {
 		qcom,mdss-dsi-panel-name = "truly 720p cmd mode dsi panel";

@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+/*
+ * Copyright (c) 2015-2017, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 &rpm_bus {
 	rpm-regulator-smpa1 {
 		compatible = "qcom,rpm-smd-regulator-resource";
@@ -69,7 +85,10 @@
 		qcom,resource-id = <2>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l2 {
@@ -86,7 +105,10 @@
 		qcom,resource-id = <3>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l3 {
@@ -103,7 +125,10 @@
 		qcom,resource-id = <5>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l5 {
@@ -120,7 +145,10 @@
 		qcom,resource-id = <6>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l6 {
@@ -137,7 +165,10 @@
 		qcom,resource-id = <7>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l7 {
@@ -154,7 +185,10 @@
 		qcom,resource-id = <8>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l8 {
@@ -171,7 +205,10 @@
 		qcom,resource-id = <9>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l9 {
@@ -188,7 +225,10 @@
 		qcom,resource-id = <10>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l10 {
@@ -205,7 +245,10 @@
 		qcom,resource-id = <11>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l11 {
@@ -222,7 +265,10 @@
 		qcom,resource-id = <12>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l12 {
@@ -239,7 +285,10 @@
 		qcom,resource-id = <13>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <5000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l13 {
@@ -256,7 +305,10 @@
 		qcom,resource-id = <14>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <5000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l14 {
@@ -273,7 +325,10 @@
 		qcom,resource-id = <15>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <5000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l15 {
@@ -290,7 +345,10 @@
 		qcom,resource-id = <16>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <5000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l16 {
@@ -307,7 +365,10 @@
 		qcom,resource-id = <17>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l17 {
@@ -324,7 +385,10 @@
 		qcom,resource-id = <19>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l19 {
@@ -341,7 +405,10 @@
 		qcom,resource-id = <22>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l22 {
@@ -358,7 +425,10 @@
 		qcom,resource-id = <23>;
 		qcom,regulator-type = <0>;
 		qcom,hpm-min-load = <10000>;
+<<<<<<< HEAD
 		qcom,regulator-hw-type = "pmic4-ldo";
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		status = "disabled";
 
 		regulator-l23 {

@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+/*
+ * Copyright (c) 2015-2016, 2018, 2020, The Linux Foundation. All rights reserved.
+
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 &soc {
 	tmc_etr: tmc@6028000 {
 		compatible = "arm,primecell";
@@ -7,7 +23,11 @@
 				<0x6044000 0x15000>;
 		reg-names = "tmc-base", "bam-base";
 
+<<<<<<< HEAD
 		interrupts = <0 166 IRQ_TYPE_LEVEL_HIGH>;
+=======
+		interrupts = <0 166 0>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		interrupt-names = "byte-cntr-irq";
 
 		arm,buffer-size = <0x100000>;
@@ -18,8 +38,13 @@
 		coresight-csr = <&csr>;
 		coresight-ctis = <&cti0 &cti8>;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		port {
@@ -45,8 +70,13 @@
 
 		coresight-ctis = <&cti0 &cti8>;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		ports {
@@ -80,8 +110,13 @@
 
 		coresight-name = "coresight-replicator";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		ports {
@@ -115,8 +150,13 @@
 
 		coresight-name = "coresight-funnel-in0";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		ports {
@@ -185,8 +225,13 @@
 
 		coresight-name = "coresight-funnel-center";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		ports {
@@ -229,8 +274,13 @@
 
 		coresight-name = "coresight-funnel-right";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		ports {
@@ -272,8 +322,13 @@
 		reg-names = "funnel-base";
 
 		coresight-name = "coresight-funnel-mm";
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		ports {
@@ -334,8 +389,13 @@
 
 		coresight-name = "coresight-funnel-cam";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		port {
@@ -354,8 +414,13 @@
 
 		coresight-name = "coresight-funnel-apss";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		ports {
@@ -453,8 +518,13 @@
 		qcom,tupwr-disable;
 		coresight-name = "coresight-etm4";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		port {
@@ -474,8 +544,13 @@
 		qcom,tupwr-disable;
 		coresight-name = "coresight-etm5";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		port {
@@ -495,8 +570,13 @@
 		qcom,tupwr-disable;
 		coresight-name = "coresight-etm6";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		port {
@@ -516,8 +596,13 @@
 		qcom,tupwr-disable;
 		coresight-name = "coresight-etm7";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		port {
@@ -537,8 +622,13 @@
 		qcom,tupwr-disable;
 		coresight-name = "coresight-etm0";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		port {
@@ -558,8 +648,13 @@
 		qcom,tupwr-disable;
 		coresight-name = "coresight-etm1";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		port {
@@ -579,8 +674,13 @@
 		qcom,tupwr-disable;
 		coresight-name = "coresight-etm2";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		port {
@@ -600,8 +700,13 @@
 		coresight-name = "coresight-etm3";
 		cpu = <&CPU3>;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		port {
@@ -621,8 +726,13 @@
 
 		coresight-name = "coresight-stm";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		port {
@@ -640,8 +750,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti0";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -653,8 +768,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti1";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -666,8 +786,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti2";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -679,8 +804,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti3";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -692,8 +822,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti4";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -705,8 +840,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti5";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -718,8 +858,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti6";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -731,8 +876,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti7";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -744,8 +894,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti8";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -757,8 +912,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti9";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -770,8 +930,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti10";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -783,8 +948,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti11";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -796,8 +966,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti12";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -809,8 +984,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti13";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -822,8 +1002,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti14";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -835,12 +1020,21 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti15";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
 		clock-names = "apb_pclk";
 	};
 
 	cti_cpu0: cti@61b8000 {
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+		clock-names = "apb_pclk";
+	};
+
+	cti_cpu0: cti@61b8000{
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		compatible = "arm,primecell";
 		arm,primecell-periphid = <0x0003b966>;
 
@@ -850,12 +1044,21 @@
 		cpu = <&CPU0>;
 		qcom,cti-save;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
 		clock-names = "apb_pclk";
 	};
 
 	cti_cpu1: cti@61b9000 {
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+		clock-names = "apb_pclk";
+	};
+
+	cti_cpu1: cti@61b9000{
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		compatible = "arm,primecell";
 		arm,primecell-periphid = <0x0003b966>;
 
@@ -865,12 +1068,21 @@
 		cpu = <&CPU1>;
 		qcom,cti-save;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
 		clock-names = "apb_pclk";
 	};
 
 	cti_cpu2: cti@61ba000 {
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+		clock-names = "apb_pclk";
+	};
+
+	cti_cpu2: cti@61ba000{
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		compatible = "arm,primecell";
 		arm,primecell-periphid = <0x0003b966>;
 
@@ -880,12 +1092,21 @@
 		cpu = <&CPU2>;
 		qcom,cti-save;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
 		clock-names = "apb_pclk";
 	};
 
 	cti_cpu3: cti@61bb000 {
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+		clock-names = "apb_pclk";
+	};
+
+	cti_cpu3: cti@61bb000{
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		compatible = "arm,primecell";
 		arm,primecell-periphid = <0x0003b966>;
 
@@ -895,12 +1116,21 @@
 		cpu = <&CPU3>;
 		qcom,cti-save;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
 		clock-names = "apb_pclk";
 	};
 
 	cti_cpu4: cti@6198000 {
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+		clock-names = "apb_pclk";
+	};
+
+	cti_cpu4: cti@6198000{
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		compatible = "arm,primecell";
 		arm,primecell-periphid = <0x0003b966>;
 
@@ -910,12 +1140,21 @@
 		cpu = <&CPU4>;
 		qcom,cti-save;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
 		clock-names = "apb_pclk";
 	};
 
 	cti_cpu5: cti@6199000 {
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+		clock-names = "apb_pclk";
+	};
+
+	cti_cpu5: cti@6199000{
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		compatible = "arm,primecell";
 		arm,primecell-periphid = <0x0003b966>;
 
@@ -925,12 +1164,21 @@
 		cpu = <&CPU5>;
 		qcom,cti-save;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
 		clock-names = "apb_pclk";
 	};
 
 	cti_cpu6: cti@619a000 {
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+		clock-names = "apb_pclk";
+	};
+
+	cti_cpu6: cti@619a000{
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		compatible = "arm,primecell";
 		arm,primecell-periphid = <0x0003b966>;
 
@@ -940,12 +1188,21 @@
 		cpu = <&CPU6>;
 		qcom,cti-save;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
 		clock-names = "apb_pclk";
 	};
 
 	cti_cpu7: cti@619b000 {
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+		clock-names = "apb_pclk";
+	};
+
+	cti_cpu7: cti@619b000{
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		compatible = "arm,primecell";
 		arm,primecell-periphid = <0x0003b966>;
 
@@ -955,12 +1212,21 @@
 		cpu = <&CPU7>;
 		qcom,cti-save;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
 		clock-names = "apb_pclk";
 	};
 
 	cti_modem_cpu0: cti@6124000 {
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+		clock-names = "apb_pclk";
+	};
+
+	cti_modem_cpu0: cti@6124000{
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		compatible = "arm,primecell";
 		arm,primecell-periphid = <0x0003b966>;
 
@@ -968,8 +1234,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti-modem-cpu0";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -983,8 +1254,13 @@
 		coresight-name = "coresight-cti-video-cpu0";
 
 		status = "disabled";
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -998,8 +1274,13 @@
 		coresight-name = "coresight-cti-wcn-cpu0";
 
 		status = "disabled";
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -1012,8 +1293,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti-audio-cpu0";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -1025,8 +1311,13 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti-rpm-cpu0";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -1094,8 +1385,13 @@
 
 		qcom,blk-size = <1>;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 
@@ -1109,8 +1405,13 @@
 		qcom,dbgui-data-offset = <0x130>;
 		qcom,dbgui-size = <64>;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		port {
@@ -1131,8 +1432,13 @@
 		qcom,tpda-atid = <64>;
 		qcom,cmb-elem-size = <0 32>;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		ports {
@@ -1164,8 +1470,13 @@
 		reg-names = "tpdm-base";
 		coresight-name = "coresight-tpdm-dcc";
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 
 		port {
@@ -1195,8 +1506,13 @@
 		coresight-name = "coresight-hwevent";
 		coresight-csr = <&csr>;
 
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_QDSS_CLK>,
 			 <&rpmcc RPM_SMD_QDSS_A_CLK>;
+=======
+		clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		clock-names = "apb_pclk";
 	};
 

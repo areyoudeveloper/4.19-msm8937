@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+/*
+ * Copyright (c) 2018, 2020, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 #include "msm-audio-lpass.dtsi"
 #include "msm8953-wsa881x.dtsi"
 
@@ -81,19 +97,29 @@
 			<&dai_mi2s0>, <&dai_mi2s1>,
 			<&dai_mi2s2>, <&dai_mi2s3>,
 			<&dai_mi2s4>, <&dai_mi2s5>,
+<<<<<<< HEAD
 			/* TBD
 			 * &sb_0_rx>, <&sb_0_tx>, <&sb_1_rx>, <&sb_1_tx>,
 			 * <&sb_3_rx>, <&sb_3_tx>, <&sb_4_rx>, <&sb_4_tx>,
 			 */
+=======
+			<&sb_0_rx>, <&sb_0_tx>, <&sb_1_rx>, <&sb_1_tx>,
+			<&sb_3_rx>, <&sb_3_tx>, <&sb_4_rx>, <&sb_4_tx>,
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 			<&bt_sco_rx>, <&bt_sco_tx>,
 			<&int_fm_rx>, <&int_fm_tx>,
 			<&afe_pcm_rx>, <&afe_pcm_tx>,
 			<&afe_proxy_rx>, <&afe_proxy_tx>,
 			<&incall_record_rx>, <&incall_record_tx>,
+<<<<<<< HEAD
 			<&incall_music_rx>, <&incall_music_2_rx>;
 			/* TBD
 			 * <&proxy_rx>, <&proxy_tx>;
 			 */
+=======
+			<&incall_music_rx>, <&incall_music_2_rx>,
+			<&proxy_rx>, <&proxy_tx>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 
 		asoc-cpu-names = "msm-dai-q6-auxpcm.1",
 				"msm-dai-q6-mi2s.0", "msm-dai-q6-mi2s.1",
@@ -108,10 +134,15 @@
 				"msm-dai-q6-dev.224", "msm-dai-q6-dev.225",
 				"msm-dai-q6-dev.241", "msm-dai-q6-dev.240",
 				"msm-dai-q6-dev.32771", "msm-dai-q6-dev.32772",
+<<<<<<< HEAD
 				"msm-dai-q6-dev.32773", "msm-dai-q6-dev.32770";
 				/* TBD
 				 * "msm-dai-q6-dev.8194", "msm-dai-q6-dev.8195";
 				 */
+=======
+				"msm-dai-q6-dev.32773", "msm-dai-q6-dev.32770",
+				"msm-dai-q6-dev.8194", "msm-dai-q6-dev.8195";
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 
 		asoc-codec = <&stub_codec>, <&msm_digital_codec>,
 				<&pmic_analog_codec>;
@@ -159,7 +190,10 @@
 			qcom,wsa-analog-reset-gpio =
 				<&wsa881x_analog_reset_gpio>;
 		};
+<<<<<<< HEAD
 
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		wsa881x_i2c_45: wsa881x-i2c-codec@45 {
 			status = "okay";
 			compatible = "qcom,wsa881x-i2c-codec";
@@ -173,14 +207,20 @@
 		pinctrl-0 = <&wsa_vi_on>;
 		pinctrl-1 = <&wsa_vi_off>;
 	};
+<<<<<<< HEAD
 
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 	wsa881x_analog_clk_gpio: wsa881x_analog_clk_pctrl {
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&wsa_clk_on>;
 		pinctrl-1 = <&wsa_clk_off>;
 	};
+<<<<<<< HEAD
 
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 	wsa881x_analog_reset_gpio: wsa881x_analog_reset_pctrl {
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
@@ -258,15 +298,22 @@
 
 		asoc-cpu = <&dai_pri_auxpcm>,
 				<&dai_mi2s2>, <&dai_mi2s3>, <&dai_mi2s5>,
+<<<<<<< HEAD
 			/* TBD
 			 * <&sb_0_rx>, <&sb_0_tx>, <&sb_1_rx>, <&sb_1_tx>,
 			 * <&sb_2_rx>, <&sb_2_tx>, <&sb_3_rx>, <&sb_3_tx>,
 			 * <&sb_4_rx>, <&sb_4_tx>, <&sb_5_tx>,
 			 */
+=======
+				<&sb_0_rx>, <&sb_0_tx>, <&sb_1_rx>, <&sb_1_tx>,
+				<&sb_2_rx>, <&sb_2_tx>, <&sb_3_rx>, <&sb_3_tx>,
+				<&sb_4_rx>, <&sb_4_tx>, <&sb_5_tx>,
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 				<&afe_pcm_rx>, <&afe_pcm_tx>,
 				<&afe_proxy_rx>, <&afe_proxy_tx>,
 				<&incall_record_rx>, <&incall_record_tx>,
 				<&incall_music_rx>, <&incall_music_2_rx>,
+<<<<<<< HEAD
 				/* TBD
 				 * <&sb_5_rx>, <&bt_sco_rx>, <&bt_sco_tx>,
 				 */
@@ -275,6 +322,11 @@
 				 * , <&sb_6_rx>,
 				 * <&proxy_rx>, <&proxy_tx>;
 				 */
+=======
+				<&sb_5_rx>, <&bt_sco_rx>, <&bt_sco_tx>,
+				<&int_fm_rx>, <&int_fm_tx>, <&sb_6_rx>,
+				<&proxy_rx>, <&proxy_tx>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 
 		asoc-cpu-names = "msm-dai-q6-auxpcm.1",
 				"msm-dai-q6-mi2s.2", "msm-dai-q6-mi2s.3",
@@ -290,10 +342,15 @@
 				"msm-dai-q6-dev.32773", "msm-dai-q6-dev.32770",
 				"msm-dai-q6-dev.16394", "msm-dai-q6-dev.12288",
 				"msm-dai-q6-dev.12289", "msm-dai-q6-dev.12292",
+<<<<<<< HEAD
 				"msm-dai-q6-dev.12293", "msm-dai-q6-dev.16396";
 				/* TBD
 				 * "msm-dai-q6-dev.8194", "msm-dai-q6-dev.8195";
 				 */
+=======
+				"msm-dai-q6-dev.12293", "msm-dai-q6-dev.16396",
+				"msm-dai-q6-dev.8194", "msm-dai-q6-dev.8195";
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 
 		asoc-codec = <&stub_codec>, <&hdmi_dba>;
 		asoc-codec-names = "msm-stub-codec.1", "msm-hdmi-dba-codec-rx";
@@ -327,7 +384,11 @@
 		qcom,node_has_rpm_clock;
 		#clock-cells = <1>;
 		qcom,audio-ref-clk-gpio = <&pm8937_gpios 1 0>;
+<<<<<<< HEAD
 		clocks = <&rpmcc RPM_SMD_DIV_CLK2>;
+=======
+		clocks = <&clock_gcc clk_div_clk2>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		pinctrl-0 = <&cdc_mclk2_sleep>;
 		pinctrl-1 = <&cdc_mclk2_active>;
 	};
@@ -365,10 +426,15 @@
 		qcom,wcd-rst-gpio-node = <&wcd_rst_gpio>;
 
 		clock-names = "wcd_clk", "wcd_native_clk";
+<<<<<<< HEAD
 		/* TODO
 		 * clocks = < &clock_audio clk_audio_pmi_clk>,
 		 * <&clock_audio clk_audio_ap_clk2>;
 		 */
+=======
+		clocks = <&clock_audio clk_audio_pmi_clk>,
+			<&clock_audio clk_audio_ap_clk2>;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 
 		qcom,cdc-static-supplies =
 				"cdc-vdd-buck",

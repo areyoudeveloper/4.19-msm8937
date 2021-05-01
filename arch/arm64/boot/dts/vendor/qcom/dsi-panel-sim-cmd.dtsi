@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 &mdss_mdp {
 	dsi_sim_cmd: qcom,mdss_dsi_sim_cmd {
 		qcom,mdss-dsi-panel-name = "Simulator cmd mode dsi panel";
@@ -6,13 +7,34 @@
 		qcom,dsi-ctrl-num = <0>;
 		qcom,dsi-phy-num = <0>;
 
+=======
+/* Copyright (c) 2014-2015, 2017, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+&mdss_mdp {
+	dsi_sim_cmd: qcom,mdss_dsi_sim_cmd{
+		qcom,mdss-dsi-panel-name = "Simulator cmd mode dsi panel";
+		qcom,mdss-dsi-panel-type = "dsi_cmd_mode";
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		qcom,mdss-dsi-virtual-channel-id = <0>;
 		qcom,mdss-dsi-stream = <0>;
 		qcom,mdss-dsi-bpp = <24>;
 		qcom,mdss-dsi-color-order = "rgb_swap_rgb";
 		qcom,mdss-dsi-underflow-color = <0xff>;
 		qcom,mdss-dsi-border-color = <0>;
+<<<<<<< HEAD
 		qcom,mdss-dsi-panel-mode-switch;
+=======
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		qcom,mdss-dsi-traffic-mode = "non_burst_sync_event";
 		qcom,mdss-dsi-bllp-eof-power-mode;
 		qcom,mdss-dsi-bllp-power-mode;
@@ -34,6 +56,10 @@
 		qcom,mdss-dsi-te-using-wd;
 		qcom,mdss-dsi-te-using-te-pin;
 		qcom,mdss-dsi-panel-hdr-enabled;
+<<<<<<< HEAD
+=======
+		qcom,ulps-enabled;
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 		qcom,mdss-dsi-panel-hdr-color-primaries = <14500 15500 32000
 			17000 15500 30000 8000 3000>;
 		qcom,mdss-dsi-panel-peak-brightness = <4200000>;
@@ -41,6 +67,7 @@
 		qcom,panel-ack-disabled;
 
 		qcom,mdss-dsi-display-timings {
+<<<<<<< HEAD
 			timing@0 {
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <2560>;
@@ -175,6 +202,9 @@
 			};
 
 			timing@2 {
+=======
+			timing@0{
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 				qcom,mdss-dsi-panel-width = <1440>;
 				qcom,mdss-dsi-panel-height = <2560>;
 				qcom,mdss-dsi-h-front-porch = <120>;
@@ -229,8 +259,12 @@
 				qcom,mdss-dsc-bit-per-pixel = <8>;
 				qcom,mdss-dsc-block-prediction-enable;
 			};
+<<<<<<< HEAD
 
 			timing@3 {
+=======
+			timing@1{
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <1920>;
 				qcom,mdss-dsi-h-front-porch = <120>;
@@ -285,8 +319,12 @@
 				qcom,mdss-dsc-bit-per-pixel = <8>;
 				qcom,mdss-dsc-block-prediction-enable;
 			};
+<<<<<<< HEAD
 
 			timing@4 {
+=======
+			timing@2{
+>>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
 				qcom,mdss-dsi-panel-width = <720>;
 				qcom,mdss-dsi-panel-height = <1280>;
 				qcom,mdss-dsi-h-front-porch = <100>;
