@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /* Copyright (c) 2015-2016, 2018, The Linux Foundation. All rights reserved.
  *
@@ -13,6 +14,8 @@
  */
 
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 #include <dt-bindings/msm/msm-bus-ids.h>
 
 &soc {
@@ -36,12 +39,17 @@
 			qcom,util-fact = <154>;
 			clock-names = "bus_clk", "bus_a_clk";
 <<<<<<< HEAD
+<<<<<<< HEAD
 			clocks = <&rpmcc BIMC_MSMBUS_CLK>,
 				<&rpmcc BIMC_MSMBUS_A_CLK>;
 =======
 			clocks = <&clock_gcc  clk_bimc_msmbus_clk>,
 				<&clock_gcc  clk_bimc_msmbus_a_clk>;
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+			clocks = <&rpmcc BIMC_MSMBUS_CLK>,
+				<&rpmcc BIMC_MSMBUS_A_CLK>;
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		};
 
 		fab_pcnoc: fab-pcnoc {
@@ -54,12 +62,17 @@
 			qcom,bus-type = <1>;
 			clock-names = "bus_clk", "bus_a_clk";
 <<<<<<< HEAD
+<<<<<<< HEAD
 			clocks = <&rpmcc PNOC_MSMBUS_CLK>,
 				<&rpmcc PNOC_MSMBUS_A_CLK>;
 =======
 			clocks = <&clock_gcc  clk_pnoc_msmbus_clk>,
 				<&clock_gcc  clk_pnoc_msmbus_a_clk>;
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+			clocks = <&rpmcc PNOC_MSMBUS_CLK>,
+				<&rpmcc PNOC_MSMBUS_A_CLK>;
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		};
 
 		fab_snoc: fab-snoc {
@@ -72,12 +85,17 @@
 			qcom,bus-type = <1>;
 			clock-names = "bus_clk", "bus_a_clk";
 <<<<<<< HEAD
+<<<<<<< HEAD
 			clocks = <&rpmcc SNOC_MSMBUS_CLK>,
 				<&rpmcc SNOC_MSMBUS_A_CLK>;
 =======
 			clocks = <&clock_gcc  clk_snoc_msmbus_clk>,
 				<&clock_gcc  clk_snoc_msmbus_a_clk>;
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+			clocks = <&rpmcc SNOC_MSMBUS_CLK>,
+				<&rpmcc SNOC_MSMBUS_A_CLK>;
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		};
 
 		fab_snoc_mm: fab-snoc-mm {
@@ -91,12 +109,17 @@
 			qcom,util-fact = <154>;
 			clock-names = "bus_clk", "bus_a_clk";
 <<<<<<< HEAD
+<<<<<<< HEAD
 			clocks = <&rpmcc SYSMMNOC_MSMBUS_CLK>,
 				<&rpmcc SYSMMNOC_MSMBUS_A_CLK>;
 =======
 			clocks = <&clock_gcc  clk_sysmmnoc_msmbus_clk>,
 				<&clock_gcc  clk_sysmmnoc_msmbus_a_clk>;
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+			clocks = <&rpmcc SYSMMNOC_MSMBUS_CLK>,
+				<&rpmcc SYSMMNOC_MSMBUS_A_CLK>;
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		};
 
 		/*BIMC Masters*/
@@ -965,6 +988,7 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	devfreq_spdm_cpu {
 		compatible = "qcom,devfreq_spdm";
@@ -1009,4 +1033,6 @@
 		interrupts = <0 192 0>;
 	};
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 };

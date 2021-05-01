@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /*
  * Copyright (c) 2015-2018, The Linux Foundation. All rights reserved.
@@ -14,6 +15,8 @@
  */
 
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 &rpm_bus {
 	rpm-regulator-smpa1 {
 		status = "okay";
@@ -363,6 +366,7 @@
 	apc_vreg_corner: regulator@b018000 {
 		compatible = "qcom,cpr-regulator";
 <<<<<<< HEAD
+<<<<<<< HEAD
 		reg = <0xb018000 0x1000>, <0xb011064 0x4>, <0xa4000 0x1000>;
 		reg-names = "rbcpr", "rbcpr_clk", "efuse_addr";
 		interrupts = <0 15 IRQ_TYPE_LEVEL_HIGH>;
@@ -371,6 +375,11 @@
 		reg-names = "rbcpr", "rbcpr_clk", "efuse_addr";
 		interrupts = <0 15 0>;
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+		reg = <0xb018000 0x1000>, <0xb011064 0x4>, <0xa4000 0x1000>;
+		reg-names = "rbcpr", "rbcpr_clk", "efuse_addr";
+		interrupts = <0 15 IRQ_TYPE_LEVEL_HIGH>;
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		regulator-name = "apc_corner";
 		regulator-min-microvolt = <1>;
 		regulator-max-microvolt = <7>;

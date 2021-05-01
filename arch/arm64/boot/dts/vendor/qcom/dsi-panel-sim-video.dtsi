@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /* Copyright (c) 2012-2015, 2017, The Linux Foundation. All rights reserved.
  *
@@ -13,17 +14,25 @@
  */
 
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 &mdss_mdp {
 	dsi_sim_vid: qcom,mdss_dsi_sim_video {
 		qcom,mdss-dsi-panel-name = "Simulator video mode dsi panel";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 
 		qcom,dsi-ctrl-num = <0>;
 		qcom,dsi-phy-num = <0>;
 
+<<<<<<< HEAD
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		qcom,mdss-dsi-virtual-channel-id = <0>;
 		qcom,mdss-dsi-stream = <0>;
 		qcom,mdss-dsi-bpp = <24>;
@@ -50,10 +59,14 @@
 
 		qcom,mdss-dsi-display-timings {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			timing@0 {
 =======
 			timing@0{
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+			timing@0 {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				qcom,mdss-dsi-panel-width = <640>;
 				qcom,mdss-dsi-panel-height = <480>;
 				qcom,mdss-dsi-h-front-porch = <8>;

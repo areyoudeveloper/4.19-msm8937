@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /*
  * Copyright (c) 2015-2016, 2018-2020, The Linux Foundation. All rights reserved.
@@ -14,11 +15,14 @@
  */
 
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 &soc {
 	tlmm: pinctrl@1000000 {
 		compatible = "qcom,msm8937-pinctrl";
 		reg = <0x1000000 0x300000>;
 		reg-names = "pinctrl_regs";
+<<<<<<< HEAD
 <<<<<<< HEAD
 	interrupts-extended = <&wakegic GIC_SPI 208 IRQ_TYPE_LEVEL_HIGH>;
 		gpio-controller;
@@ -77,12 +81,67 @@
 			irqdomain-map-mask = <0xff 0>;
 =======
 		interrupts-extended = <&wakegic GIC_SPI 208 IRQ_TYPE_NONE>;
+=======
+	interrupts-extended = <&wakegic GIC_SPI 208 IRQ_TYPE_LEVEL_HIGH>;
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		gpio-controller;
 		#gpio-cells = <2>;
 		interrupt-controller;
-		interrupt-parent = <&wakegpio>;
+		wakeup-parent = <&wakegpio>;
 		#interrupt-cells = <2>;
+<<<<<<< HEAD
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+		irqdomain-map = <38 0 &wakegpio 3 0>,
+				<1 0 &wakegpio 4 0>,
+				<5 0 &wakegpio 5 0>,
+				<9 0 &wakegpio 6 0>,
+				<37 0 &wakegpio 8 0>,
+				<36 0 &wakegpio 9 0>,
+				<13 0 &wakegpio 10 0>,
+				<35 0 &wakegpio 11 0>,
+				<17 0 &wakegpio 12 0>,
+				<21 0 &wakegpio 13 0>,
+				<54 0 &wakegpio 14 0>,
+				<34 0 &wakegpio 15 0>,
+				<31 0 &wakegpio 16 0>,
+				<58 0 &wakegpio 17 0>,
+				<28 0 &wakegpio 18 0>,
+				<42 0 &wakegpio 19 0>,
+				<25 0 &wakegpio 20 0>,
+				<12 0 &wakegpio 21 0>,
+				<43 0 &wakegpio 22 0>,
+				<44 0 &wakegpio 23 0>,
+				<45 0 &wakegpio 24 0>,
+				<46 0 &wakegpio 25 0>,
+				<48 0 &wakegpio 26 0>,
+				<65 0 &wakegpio 27 0>,
+				<93 0 &wakegpio 28 0>,
+				<97 0 &wakegpio 29 0>,
+				<63 0 &wakegpio 30 0>,
+				<70 0 &wakegpio 31 0>,
+				<71 0 &wakegpio 32 0>,
+				<72 0 &wakegpio 33 0>,
+				<81 0 &wakegpio 34 0>,
+				<126 0 &wakegpio 35 0>,
+				<90 0 &wakegpio 36 0>,
+				<128 0 &wakegpio 37 0>,
+				<91 0 &wakegpio 38 0>,
+				<41 0 &wakegpio 39 0>,
+				<127 0 &wakegpio 40 0>,
+				<86 0 &wakegpio 41 0>,
+				<67 0 &wakegpio 50 0>,
+				<73 0 &wakegpio 51 0>,
+				<74 0 &wakegpio 52 0>,
+				<62 0 &wakegpio 53 0>,
+				<124 0 &wakegpio 54 0>,
+				<61 0 &wakegpio 55 0>,
+				<130 0 &wakegpio 56 0>,
+				<59 0 &wakegpio 57 0>,
+				<50 0 &wakegpio 59 0>;
+			irqdomain-map-pass-thru = <0 0xff>;
+			irqdomain-map-mask = <0xff 0>;
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 
 		pmx-uartconsole {
 			uart_console_active: uart_console_active {
@@ -524,9 +583,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			spi7_cs0_active: cs0_active {
 				mux {
 					pins = "gpio87";
@@ -575,9 +638,13 @@
 					pins = "gpio48";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				config {
 					pins = "gpio48";
 					drive-strength = <2>;
@@ -595,25 +662,37 @@
 					function = "wcss_wlan2";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				wcss_wlan1 {
 					pins = "gpio77";
 					function = "wcss_wlan1";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				wcss_wlan0 {
 					pins = "gpio78";
 					function = "wcss_wlan0";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				wcss_wlan {
 					pins = "gpio79", "gpio80";
 					function = "wcss_wlan";
@@ -634,25 +713,37 @@
 					function = "wcss_wlan2";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				wcss_wlan1 {
 					pins = "gpio77";
 					function = "wcss_wlan1";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				wcss_wlan0 {
 					pins = "gpio78";
 					function = "wcss_wlan0";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				wcss_wlan {
 					pins = "gpio79", "gpio80";
 					function = "wcss_wlan";
@@ -690,9 +781,13 @@
 			};
 		};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		pmx_quat_mi2s {
 			label = "quat_mi2s";
 			quat_mi2s_active: quat_mi2s_active {
@@ -701,9 +796,13 @@
 					function = "sec_mi2s";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				configs {
 					pins = "gpio94", "gpio95";
 					drive-strength = <8>;   /* 8 MA */
@@ -711,18 +810,26 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			quat_mi2s_sleep: quat_mi2s_sleep {
 				mux {
 					pins = "gpio94", "gpio95";
 					function = "sec_mi2s";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				configs {
 					pins = "gpio94", "gpio95";
 					drive-strength = <2>;   /* 2 MA */
@@ -739,9 +846,13 @@
 					function = "sec_mi2s";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				configs {
 					pins = "gpio12", "gpio13";
 					drive-strength = <8>;   /* 8 MA */
@@ -750,18 +861,26 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			quat_mi2s_din_sleep: quat_mi2s_din_sleep {
 				mux {
 					pins = "gpio12", "gpio13";
 					function = "sec_mi2s";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				configs {
 					pins = "gpio12", "gpio13";
 					drive-strength = <2>;   /* 2 MA */
@@ -777,9 +896,13 @@
 					function = "pri_mi2s";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				config {
 					pins = "gpio66";
 					drive-strength = <2>; /* 2 mA */
@@ -787,18 +910,26 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			cdc_mclk2_active: cdc_mclk2_active {
 				mux {
 					pins = "gpio66";
 					function = "pri_mi2s";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				config {
 					pins = "gpio66";
 					drive-strength = <8>; /* 8 mA */
@@ -877,9 +1008,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			mdss_dsi_suspend: mdss_dsi_suspend {
 				mux {
 					pins = "gpio60", "gpio98", "gpio99";
@@ -902,9 +1037,13 @@
 					function = "mdp_vsync";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				config {
 					pins = "gpio24";
 					drive-strength = <2>; /* 8 mA */
@@ -918,9 +1057,13 @@
 					function = "mdp_vsync";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				config {
 					pins = "gpio24";
 					drive-strength = <2>; /* 2 mA */
@@ -1055,9 +1198,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_clk_trace: clk_trace {
 				config {
 					pins = "qdsd_clk";
@@ -1066,9 +1213,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_clk_swdtrc: clk_swdtrc {
 				config {
 					pins = "qdsd_clk";
@@ -1077,9 +1228,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_clk_spmi: clk_spmi {
 				config {
 					pins = "qdsd_clk";
@@ -1098,9 +1253,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_cmd_trace: cmd_trace {
 				config {
 					pins = "qdsd_cmd";
@@ -1109,9 +1268,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_cmd_swduart: cmd_uart {
 				config {
 					pins = "qdsd_cmd";
@@ -1120,9 +1283,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_cmd_swdtrc: cmd_swdtrc {
 				config {
 					pins = "qdsd_cmd";
@@ -1139,9 +1306,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_cmd_spmi: cmd_spmi {
 				config {
 					pins = "qdsd_cmd";
@@ -1160,9 +1331,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data0_trace: data0_trace {
 				config {
 					pins = "qdsd_data0";
@@ -1171,9 +1346,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data0_swduart: data0_uart {
 				config {
 					pins = "qdsd_data0";
@@ -1182,9 +1361,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data0_swdtrc: data0_swdtrc {
 				config {
 					pins = "qdsd_data0";
@@ -1193,9 +1376,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data0_jtag: data0_jtag {
 				config {
 					pins = "qdsd_data0";
@@ -1204,9 +1391,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data0_spmi: data0_spmi {
 				config {
 					pins = "qdsd_data0";
@@ -1225,9 +1416,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data1_trace: data1_trace {
 				config {
 					pins = "qdsd_data1";
@@ -1236,9 +1431,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data1_swduart: data1_uart {
 				config {
 					pins = "qdsd_data1";
@@ -1247,9 +1446,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data1_swdtrc: data1_swdtrc {
 				config {
 					pins = "qdsd_data1";
@@ -1258,9 +1461,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data1_jtag: data1_jtag {
 				config {
 					pins = "qdsd_data1";
@@ -1279,9 +1486,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data2_trace: data2_trace {
 				config {
 					pins = "qdsd_data2";
@@ -1290,9 +1501,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data2_swduart: data2_uart {
 				config {
 					pins = "qdsd_data2";
@@ -1301,9 +1516,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data2_swdtrc: data2_swdtrc {
 				config {
 					pins = "qdsd_data2";
@@ -1312,9 +1531,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data2_jtag: data2_jtag {
 				config {
 					pins = "qdsd_data2";
@@ -1333,9 +1556,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data3_trace: data3_trace {
 				config {
 					pins = "qdsd_data3";
@@ -1344,9 +1571,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data3_swduart: data3_uart {
 				config {
 					pins = "qdsd_data3";
@@ -1355,9 +1586,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data3_swdtrc: data3_swdtrc {
 				config {
 					pins = "qdsd_data3";
@@ -1366,9 +1601,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data3_jtag: data3_jtag {
 				config {
 					pins = "qdsd_data3";
@@ -1377,9 +1616,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qdsd_data3_spmi: data3_spmi {
 				config {
 					pins = "qdsd_data3";
@@ -1407,10 +1650,14 @@
 
 		wcd9xxx_intr {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			wcd_intr_default: wcd_intr_default {
 =======
 			wcd_intr_default: wcd_intr_default{
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+			wcd_intr_default: wcd_intr_default {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				mux {
 					pins = "gpio73";
 					function = "gpio";
@@ -1432,9 +1679,13 @@
 					function = "gpio";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				config {
 					pins = "gpio68";
 					drive-strength = <16>;
@@ -1443,18 +1694,26 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			cdc_reset_active:cdc_reset_active {
 				mux {
 					pins = "gpio68";
 					function = "gpio";
 				};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				config {
 					pins = "gpio68";
 					drive-strength = <16>;
@@ -1504,9 +1763,13 @@
 				};
 			};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			cdc_pdm_lines_sus: pdm_lines_off {
 				mux {
 					pins = "gpio69", "gpio73", "gpio74";
@@ -1638,9 +1901,13 @@
 			};
 		};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		pri-tlmm-lines {
 			pri_tlmm_lines_act: pri_tlmm_lines_act {
 				mux {
@@ -1893,9 +2160,13 @@
 			};
 		};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		cdc-dmic-lines {
 			cdc_dmic0_clk_act: dmic0_clk_on {
 				mux {

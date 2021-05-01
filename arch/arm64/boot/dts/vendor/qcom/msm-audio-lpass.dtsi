@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 &soc {
 =======
 /*
@@ -17,6 +18,9 @@
 &soc {
 
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+&soc {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 	pcm0: qcom,msm-pcm {
 		compatible = "qcom,msm-pcm-dsp";
 		qcom,msm-pcm-dsp-id = <0>;
@@ -51,12 +55,18 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 	trans_loopback: qcom,msm-transcode-loopback {
 		compatible = "qcom,msm-transcode-loopback";
 	};
 
+<<<<<<< HEAD
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 	compress: qcom,msm-compress-dsp {
 		compatible = "qcom,msm-compress-dsp";
 	};
@@ -90,15 +100,21 @@
 	dai_dp: qcom,msm-dai-q6-dp {
 		compatible = "qcom,msm-dai-q6-hdmi";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		qcom,msm-dai-q6-dev-id = <0>;
 	};
 
 	dai_dp1: qcom,msm-dai-q6-dp1 {
 		compatible = "qcom,msm-dai-q6-hdmi";
 		qcom,msm-dai-q6-dev-id = <1>;
+<<<<<<< HEAD
 =======
 		qcom,msm-dai-q6-dev-id = <24608>;
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 	};
 
 	loopback: qcom,msm-pcm-loopback {
@@ -106,6 +122,9 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 	loopback1: qcom,msm-pcm-loopback-low-latency {
 		compatible = "qcom,msm-pcm-loopback";
 		qcom,msm-pcm-loopback-low-latency;
@@ -115,8 +134,11 @@
 		compatible = "qcom,msm-pcm-dtmf";
 	};
 
+<<<<<<< HEAD
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 	msm_dai_mi2s: qcom,msm-dai-mi2s {
 		compatible = "qcom,msm-dai-mi2s";
 		dai_mi2s0: qcom,msm-dai-q6-mi2s-prim {
@@ -157,22 +179,30 @@
 		dai_mi2s5: qcom,msm-dai-q6-mi2s-senary {
 			compatible = "qcom,msm-dai-q6-mi2s";
 <<<<<<< HEAD
+<<<<<<< HEAD
 			qcom,msm-dai-q6-mi2s-dev-id = <5>;
 =======
 			qcom,msm-dai-q6-mi2s-dev-id = <6>;
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+			qcom,msm-dai-q6-mi2s-dev-id = <5>;
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qcom,msm-mi2s-rx-lines = <0>;
 			qcom,msm-mi2s-tx-lines = <3>;
 		};
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 	msm_dai_cdc_dma: qcom,msm-dai-cdc-dma {
 		compatible = "qcom,msm-dai-cdc-dma";
 		wsa_cdc_dma_0_rx: qcom,msm-dai-wsa-cdc-dma-0-rx {
 			compatible = "qcom,msm-dai-cdc-dma-dev";
 			qcom,msm-dai-cdc-dma-dev-id = <45056>;
 		};
+<<<<<<< HEAD
 
 		wsa_cdc_dma_0_tx: qcom,msm-dai-wsa-cdc-dma-0-tx {
 			compatible = "qcom,msm-dai-cdc-dma-dev";
@@ -294,84 +324,135 @@
 	lsm: qcom,msm-lsm-client {
 		compatible = "qcom,msm-lsm-client";
 	};
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
+
+		wsa_cdc_dma_0_tx: qcom,msm-dai-wsa-cdc-dma-0-tx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45057>;
+		};
+
+		wsa_cdc_dma_1_rx: qcom,msm-dai-wsa-cdc-dma-1-rx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45058>;
+		};
+
+		wsa_cdc_dma_1_tx: qcom,msm-dai-wsa-cdc-dma-1-tx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45059>;
+		};
+
+		wsa_cdc_dma_2_tx: qcom,msm-dai-wsa-cdc-dma-2-tx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45061>;
+		};
+
+		va_cdc_dma_0_tx: qcom,msm-dai-va-cdc-dma-0-tx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45089>;
+		};
+
+		va_cdc_dma_1_tx: qcom,msm-dai-va-cdc-dma-1-tx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45091>;
+		};
+
+		va_cdc_dma_2_tx: qcom,msm-dai-va-cdc-dma-2-tx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45093>;
+		};
+
+		rx_cdc_dma_0_rx: qcom,msm-dai-rx-cdc-dma-0-rx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45104>;
+		};
+
+		rx_cdc_dma_1_rx: qcom,msm-dai-rx-cdc-dma-1-rx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45106>;
+		};
+
+		rx_cdc_dma_2_rx: qcom,msm-dai-rx-cdc-dma-2-rx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45108>;
+		};
+
+		rx_cdc_dma_3_rx: qcom,msm-dai-rx-cdc-dma-3-rx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45110>;
+		};
+
+		rx_cdc_dma_4_rx: qcom,msm-dai-rx-cdc-dma-4-rx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45112>;
+		};
+
+		rx_cdc_dma_5_rx: qcom,msm-dai-rx-cdc-dma-5-rx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45114>;
+		};
+
+		rx_cdc_dma_6_rx: qcom,msm-dai-rx-cdc-dma-6-rx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45116>;
+		};
+
+		rx_cdc_dma_7_rx: qcom,msm-dai-rx-cdc-dma-7-rx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45118>;
+		};
+
+		tx_cdc_dma_0_tx: qcom,msm-dai-tx-cdc-dma-0-tx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45105>;
+		};
+
+		tx_cdc_dma_1_tx: qcom,msm-dai-tx-cdc-dma-1-tx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45107>;
+		};
+
+		tx_cdc_dma_2_tx: qcom,msm-dai-tx-cdc-dma-2-tx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45109>;
+		};
+
+		tx_cdc_dma_3_tx: qcom,msm-dai-tx-cdc-dma-3-tx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45111>;
+		};
+
+		tx_cdc_dma_4_tx: qcom,msm-dai-tx-cdc-dma-4-tx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45113>;
+		};
+
+		tx_cdc_dma_5_tx: qcom,msm-dai-tx-cdc-dma-5-tx {
+			compatible = "qcom,msm-dai-cdc-dma-dev";
+			qcom,msm-dai-cdc-dma-dev-id = <45115>;
+		};
+	};
+
+	lsm: qcom,msm-lsm-client {
+		compatible = "qcom,msm-lsm-client";
+	};
 
 	qcom,msm-dai-q6 {
 		compatible = "qcom,msm-dai-q6";
-		sb_0_rx: qcom,msm-dai-q6-sb-0-rx {
-			compatible = "qcom,msm-dai-q6-dev";
-			qcom,msm-dai-q6-dev-id = <16384>;
-		};
-
-		sb_0_tx: qcom,msm-dai-q6-sb-0-tx {
-			compatible = "qcom,msm-dai-q6-dev";
-			qcom,msm-dai-q6-dev-id = <16385>;
-		};
-
-		sb_1_rx: qcom,msm-dai-q6-sb-1-rx {
-			compatible = "qcom,msm-dai-q6-dev";
-			qcom,msm-dai-q6-dev-id = <16386>;
-		};
-
-		sb_1_tx: qcom,msm-dai-q6-sb-1-tx {
-			compatible = "qcom,msm-dai-q6-dev";
-			qcom,msm-dai-q6-dev-id = <16387>;
-		};
-
-		sb_2_rx: qcom,msm-dai-q6-sb-2-rx {
-			compatible = "qcom,msm-dai-q6-dev";
-			qcom,msm-dai-q6-dev-id = <16388>;
-		};
-
-		sb_2_tx: qcom,msm-dai-q6-sb-2-tx {
-			compatible = "qcom,msm-dai-q6-dev";
-			qcom,msm-dai-q6-dev-id = <16389>;
-		};
-
-
-		sb_3_rx: qcom,msm-dai-q6-sb-3-rx {
-			compatible = "qcom,msm-dai-q6-dev";
-			qcom,msm-dai-q6-dev-id = <16390>;
-		};
-
-		sb_3_tx: qcom,msm-dai-q6-sb-3-tx {
-			compatible = "qcom,msm-dai-q6-dev";
-			qcom,msm-dai-q6-dev-id = <16391>;
-		};
-
-		sb_4_rx: qcom,msm-dai-q6-sb-4-rx {
-			compatible = "qcom,msm-dai-q6-dev";
-			qcom,msm-dai-q6-dev-id = <16392>;
-		};
-
-		sb_4_tx: qcom,msm-dai-q6-sb-4-tx {
-			compatible = "qcom,msm-dai-q6-dev";
-			qcom,msm-dai-q6-dev-id = <16393>;
-		};
-
-		sb_5_tx: qcom,msm-dai-q6-sb-5-tx {
-			compatible = "qcom,msm-dai-q6-dev";
-			qcom,msm-dai-q6-dev-id = <16395>;
-		};
-
-		sb_5_rx: qcom,msm-dai-q6-sb-5-rx {
-			compatible = "qcom,msm-dai-q6-dev";
-			qcom,msm-dai-q6-dev-id = <16394>;
-		};
-
-		sb_6_rx: qcom,msm-dai-q6-sb-6-rx {
-			compatible = "qcom,msm-dai-q6-dev";
-			qcom,msm-dai-q6-dev-id = <16396>;
-		};
-
 		sb_7_rx: qcom,msm-dai-q6-sb-7-rx {
 			compatible = "qcom,msm-dai-q6-dev";
 			qcom,msm-dai-q6-dev-id = <16398>;
+<<<<<<< HEAD
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+			qcom,msm-dai-q6-slim-dev-id = <0>;
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		};
 
 		sb_7_tx: qcom,msm-dai-q6-sb-7-tx {
 			compatible = "qcom,msm-dai-q6-dev";
 			qcom,msm-dai-q6-dev-id = <16399>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 			qcom,msm-dai-q6-slim-dev-id = <0>;
 =======
@@ -381,15 +462,22 @@
 			compatible = "qcom,msm-dai-q6-dev";
 			qcom,msm-dai-q6-dev-id = <16400>;
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+			qcom,msm-dai-q6-slim-dev-id = <0>;
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		};
 
 		sb_8_tx: qcom,msm-dai-q6-sb-8-tx {
 			compatible = "qcom,msm-dai-q6-dev";
 			qcom,msm-dai-q6-dev-id = <16401>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			qcom,msm-dai-q6-slim-dev-id = <0>;
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+			qcom,msm-dai-q6-slim-dev-id = <0>;
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		};
 
 		bt_sco_rx: qcom,msm-dai-q6-bt-sco-rx {
@@ -433,6 +521,7 @@
 		};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 		afe_loopback_tx: qcom,msm-dai-q6-afe-loopback-tx {
 			compatible = "qcom,msm-dai-q6-dev";
@@ -440,6 +529,8 @@
 		};
 
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		incall_record_rx: qcom,msm-dai-q6-incall-record-rx {
 			compatible = "qcom,msm-dai-q6-dev";
 			qcom,msm-dai-q6-dev-id = <32771>;
@@ -460,9 +551,13 @@
 			qcom,msm-dai-q6-dev-id = <32770>;
 		};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		proxy_rx: qcom,msm-dai-q6-proxy-rx {
 			compatible = "qcom,msm-dai-q6-dev";
 			qcom,msm-dai-q6-dev-id = <8194>;
@@ -492,6 +587,9 @@
 		compatible = "qcom,msm-audio-apr";
 		qcom,subsys-name = "apr_adsp";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 
 		msm_audio_ion: qcom,msm-audio-ion {
 			compatible = "qcom,msm-audio-ion";
@@ -500,8 +598,11 @@
 			iommus = <&apps_smmu 0x1801 0x0>;
 			qcom,iommu-dma-addr-pool = <0x10000000 0x10000000>;
 		};
+<<<<<<< HEAD
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 	};
 
 	dai_pri_auxpcm: qcom,msm-pri-auxpcm {
@@ -575,6 +676,9 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 	dai_sen_auxpcm: qcom,msm-sen-auxpcm {
 		compatible = "qcom,msm-auxpcm-dev";
 		qcom,msm-cpudai-auxpcm-mode = <0>, <0>;
@@ -589,13 +693,17 @@
 		qcom,msm-cpudai-afe-clk-ver = <2>;
 	};
 
+<<<<<<< HEAD
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 	hdmi_dba: qcom,msm-hdmi-dba-codec-rx {
 		compatible = "qcom,msm-hdmi-dba-codec-rx";
 		qcom,dba-bridge-chip = "adv7533";
 	};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	adsp_loader: qcom,msm-adsp-loader {
 =======
@@ -608,16 +716,23 @@
 
 	qcom,msm-adsp-loader {
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+	adsp_loader: qcom,msm-adsp-loader {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		status = "ok";
 		compatible = "qcom,adsp-loader";
 		qcom,adsp-state = <0>;
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	tdm_pri_rx: qcom,msm-dai-tdm-pri-rx {
 =======
 	qcom,msm-dai-tdm-pri-rx {
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+	tdm_pri_rx: qcom,msm-dai-tdm-pri-rx {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		compatible = "qcom,msm-dai-tdm";
 		qcom,msm-cpudai-tdm-group-id = <37120>;
 		qcom,msm-cpudai-tdm-group-num-ports = <1>;
@@ -637,10 +752,14 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	tdm_pri_tx: qcom,msm-dai-tdm-pri-tx {
 =======
 	qcom,msm-dai-tdm-pri-tx {
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+	tdm_pri_tx: qcom,msm-dai-tdm-pri-tx {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		compatible = "qcom,msm-dai-tdm";
 		qcom,msm-cpudai-tdm-group-id = <37121>;
 		qcom,msm-cpudai-tdm-group-num-ports = <1>;
@@ -660,10 +779,14 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	tdm_sec_rx: qcom,msm-dai-tdm-sec-rx {
 =======
 	qcom,msm-dai-tdm-sec-rx {
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+	tdm_sec_rx: qcom,msm-dai-tdm-sec-rx {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		compatible = "qcom,msm-dai-tdm";
 		qcom,msm-cpudai-tdm-group-id = <37136>;
 		qcom,msm-cpudai-tdm-group-num-ports = <1>;
@@ -683,10 +806,14 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	tdm_sec_tx: qcom,msm-dai-tdm-sec-tx {
 =======
 	qcom,msm-dai-tdm-sec-tx {
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+	tdm_sec_tx: qcom,msm-dai-tdm-sec-tx {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		compatible = "qcom,msm-dai-tdm";
 		qcom,msm-cpudai-tdm-group-id = <37137>;
 		qcom,msm-cpudai-tdm-group-num-ports = <1>;
@@ -706,10 +833,14 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	tdm_tert_rx: qcom,msm-dai-tdm-tert-rx {
 =======
 	qcom,msm-dai-tdm-tert-rx {
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+	tdm_tert_rx: qcom,msm-dai-tdm-tert-rx {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		compatible = "qcom,msm-dai-tdm";
 		qcom,msm-cpudai-tdm-group-id = <37152>;
 		qcom,msm-cpudai-tdm-group-num-ports = <1>;
@@ -729,10 +860,14 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	tdm_tert_tx: qcom,msm-dai-tdm-tert-tx {
 =======
 	qcom,msm-dai-tdm-tert-tx {
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+	tdm_tert_tx: qcom,msm-dai-tdm-tert-tx {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		compatible = "qcom,msm-dai-tdm";
 		qcom,msm-cpudai-tdm-group-id = <37153>;
 		qcom,msm-cpudai-tdm-group-num-ports = <1>;
@@ -752,10 +887,14 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	tdm_quat_rx: qcom,msm-dai-tdm-quat-rx {
 =======
 	msm_dai_tdm_quat_rx: qcom,msm-dai-tdm-quat-rx {
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+	tdm_quat_rx: qcom,msm-dai-tdm-quat-rx {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		compatible = "qcom,msm-dai-tdm";
 		qcom,msm-cpudai-tdm-group-id = <37168>;
 		qcom,msm-cpudai-tdm-group-num-ports = <1>;
@@ -775,10 +914,14 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	tdm_quat_tx: qcom,msm-dai-tdm-quat-tx {
 =======
 	qcom,msm-dai-tdm-quat-tx {
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+	tdm_quat_tx: qcom,msm-dai-tdm-quat-tx {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		compatible = "qcom,msm-dai-tdm";
 		qcom,msm-cpudai-tdm-group-id = <37169>;
 		qcom,msm-cpudai-tdm-group-num-ports = <1>;
@@ -798,10 +941,14 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	tdm_quin_rx: qcom,msm-dai-tdm-quin-rx {
 =======
 	qcom,msm-dai-tdm-quin-rx {
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+	tdm_quin_rx: qcom,msm-dai-tdm-quin-rx {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		compatible = "qcom,msm-dai-tdm";
 		qcom,msm-cpudai-tdm-group-id = <37184>;
 		qcom,msm-cpudai-tdm-group-num-ports = <1>;
@@ -821,10 +968,14 @@
 	};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	tdm_quin_tx: qcom,msm-dai-tdm-quin-tx {
 =======
 	qcom,msm-dai-tdm-quin-tx {
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+	tdm_quin_tx: qcom,msm-dai-tdm-quin-tx {
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		compatible = "qcom,msm-dai-tdm";
 		qcom,msm-cpudai-tdm-group-id = <37185>;
 		qcom,msm-cpudai-tdm-group-num-ports = <1>;
@@ -843,6 +994,9 @@
 		};
 	};
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 
 	tdm_sen_rx: qcom,msm-dai-tdm-sen-rx {
 		compatible = "qcom,msm-dai-tdm";
@@ -906,6 +1060,9 @@
 		compatible = "qcom,msm-dai-q6-dev";
 		qcom,msm-dai-q6-dev-id = <24577>;
 	};
+<<<<<<< HEAD
 =======
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 };

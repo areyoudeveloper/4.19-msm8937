@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /* Copyright (c) 2018, The Linux Foundation. All rights reserved.
  *
@@ -13,6 +14,8 @@
  */
 
 >>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
+=======
+>>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 &mdss_mdp {
 	dsi_truly_720_vid: qcom,mdss_dsi_truly_720p_video {
 		qcom,mdss-dsi-panel-name = "truly 720p video mode dsi panel";
