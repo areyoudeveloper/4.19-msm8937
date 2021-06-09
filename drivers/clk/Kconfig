@@ -299,5 +299,5 @@ source "drivers/clk/sunxi-ng/Kconfig"
 source "drivers/clk/tegra/Kconfig"
 source "drivers/clk/ti/Kconfig"
 source "drivers/clk/uniphier/Kconfig"
-
+source "drivers/clk/msm/Kconfig"
 endmenu
