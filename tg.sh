@@ -15,6 +15,7 @@ export TIME=$(date +"%S-%F")
 	automake \
 	autotools-dev \
 	bc \
+	cpio \
 	binutils \
 	binutils-aarch64-linux-gnu \
 	binutils-arm-linux-gnueabi \
