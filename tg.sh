@@ -92,19 +92,19 @@ chmod +x build_kernel.sh
 ./build_kernel.sh g
 
 if [ -e *.zip ];
-    then
+then
 export OWO=$(ls *.zip)
 curl -F document=@$OWO "https://api.telegram.org/bot$TOKEN/sendDocument" \
         -F chat_id=$CID \
         -F "disable_web_page_preview=true" \
         -F "parse_mode=html"
-    else
-export com=$("Ci build failed")
+else
+export COM=("Ci build failed on repo 4.19-msm8937 branch main !")
 curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" \
         -d chat_id=$CID \
         -d "disable_web_page_preview=true" \
         -d "parse_mode=html" \
-        -d text="$com"
+        -d text="$COM"
 fi
 
 
