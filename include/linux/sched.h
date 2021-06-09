@@ -2222,5 +2222,21 @@ static inline void set_wake_up_idle(bool enabled)
 	else
 		current->flags &= ~PF_WAKE_UP_IDLE;
 }
+/*
+ * Do not use outside of architecture code which knows its limitations.
+ *
+ * sched_clock() has no promise of monotonicity or bounded drift between
+ * CPUs, use (which you should not) requires disabling IRQs.
+ *
+ * Please use one of the three interfaces below.
+ */
+extern unsigned long long notrace sched_clock(void);
+/*
+ * See the comment in kernel/sched/clock.c
+ */
+extern u64 running_clock(void);
+extern u64 sched_clock_cpu(int cpu);
 
+extern void sched_clock_init(void);
+extern int sched_clock_initialized(void);
 #endif
