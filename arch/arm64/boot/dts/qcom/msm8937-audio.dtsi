@@ -132,6 +132,7 @@
 	};
 
 	cdc_us_euro_sw: msm_cdc_pinctrl_us_euro_sw {
+        #gpio-cells = <2>;
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&cross_conn_det_act>;
@@ -139,6 +140,7 @@
 	};
 
 	cdc_pri_mi2s_gpios: msm_cdc_pinctrl_pri {
+        #gpio-cells = <2>;
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&cdc_pdm_lines_act &cdc_pdm_lines_2_act>;
@@ -146,6 +148,7 @@
 	};
 
 	cdc_quin_mi2s_gpios: msm_cdc_pinctrl_quin {
+        #gpio-cells = <2>;
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&pri_tlmm_lines_act &pri_tlmm_ws_act>;
@@ -174,26 +177,29 @@
 	};
 
 	wsa881x_analog_vi_gpio: wsa881x_analog_vi_pctrl {
-		compatible = "qcom,msm-cdc-pinctrl";
+        #gpio-cells = <2>;
+        compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&wsa_vi_on>;
 		pinctrl-1 = <&wsa_vi_off>;
 	};
 	wsa881x_analog_clk_gpio: wsa881x_analog_clk_pctrl {
-		compatible = "qcom,msm-cdc-pinctrl";
+        #gpio-cells = <2>;
+        compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&wsa_clk_on>;
 		pinctrl-1 = <&wsa_clk_off>;
 	};
 	wsa881x_analog_reset_gpio: wsa881x_analog_reset_pctrl {
-		compatible = "qcom,msm-cdc-pinctrl";
+        #gpio-cells = <2>;
+        compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&wsa_reset_on>;
 		pinctrl-1 = <&wsa_reset_off>;
 	};
 
 	ext_codec: sound-9335 {
-		status = "disabled";
+        status = "disabled";
 		compatible = "qcom,msm8952-audio-slim-codec";
 		qcom,model = "msm8952-tasha-snd-card";
 
