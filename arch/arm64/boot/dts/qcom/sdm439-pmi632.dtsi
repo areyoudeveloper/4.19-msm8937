@@ -63,65 +63,6 @@
 	status = "disabled";
 };
 
-&thermal_zones {
-	pmi-vbat-lvl0 {
-		cooling-maps {
-			vbat_map0 {
-				trip = <&pmi632_vbat_lvl0>;
-				cooling-device =
-					<&CPU0 THERMAL_MAX_LIMIT
-						THERMAL_MAX_LIMIT>;
-			};
-			vbat_map1 {
-				trip = <&pmi632_vbat_lvl0>;
-				cooling-device =
-					<&CPU1 THERMAL_MAX_LIMIT
-						THERMAL_MAX_LIMIT>;
-			};
-			vbat_map2 {
-				trip = <&pmi632_vbat_lvl0>;
-				cooling-device =
-					<&CPU2 THERMAL_MAX_LIMIT
-						THERMAL_MAX_LIMIT>;
-			};
-			vbat_map3 {
-				trip = <&pmi632_vbat_lvl0>;
-				cooling-device =
-					<&CPU3 THERMAL_MAX_LIMIT
-						THERMAL_MAX_LIMIT>;
-			};
-		};
-	};
-
-	soc {
-		cooling-maps {
-			soc_map0 {
-				trip = <&pmi632_low_soc>;
-				cooling-device =
-					<&CPU0 THERMAL_MAX_LIMIT
-						THERMAL_MAX_LIMIT>;
-			};
-			soc_map1 {
-				trip = <&pmi632_low_soc>;
-				cooling-device =
-					<&CPU1 THERMAL_MAX_LIMIT
-						THERMAL_MAX_LIMIT>;
-			};
-			soc_map2 {
-				trip = <&pmi632_low_soc>;
-				cooling-device =
-					<&CPU2 THERMAL_MAX_LIMIT
-						THERMAL_MAX_LIMIT>;
-			};
-			soc_map3 {
-				trip = <&pmi632_low_soc>;
-				cooling-device =
-					<&CPU3 THERMAL_MAX_LIMIT
-						THERMAL_MAX_LIMIT>;
-			};
-		};
-	};
-
 	quiet-therm-step {
 		polling-delay-passive = <1000>;
 		polling-delay = <0>;
@@ -288,23 +229,6 @@
 			battery_lvl7 {
 				trip = <&quiet_batt_439_trip7>;
 				cooling-device = <&pmi632_charger 7 7>;
-			};
-
-		};
-	};
-
-	quiet-therm-adc {
-		polling-delay-passive = <0>;
-		polling-delay = <0>;
-		thermal-sensors = <&pmi632_adc_tm 0x53>;
-		thermal-governor = "user_space";
-		wake-capable-sensor;
-
-		trips {
-			active-config0 {
-				temperature = <65000>;
-				hysteresis = <1000>;
-				type = "passive";
 			};
 		};
 	};
