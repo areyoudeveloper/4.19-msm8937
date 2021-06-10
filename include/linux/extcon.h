@@ -176,7 +176,65 @@ union extcon_property_value {
 	int intval;	/* type : integer (intval) */
 };
 
-struct extcon_dev;
+
+struct extcon_cable;
+
+/**
+ * struct extcon_dev - An extcon device represents one external connector.
+ * @name:		The name of this extcon device. Parent device name is
+ *			used if NULL.
+ * @supported_cable:	Array of supported cable names ending with EXTCON_NONE.
+ *			If supported_cable is NULL, cable name related APIs
+ *			are disabled.
+ * @mutually_exclusive:	Array of mutually exclusive set of cables that cannot
+ *			be attached simultaneously. The array should be
+ *			ending with NULL or be NULL (no mutually exclusive
+ *			cables). For example, if it is { 0x7, 0x30, 0}, then,
+ *			{0, 1}, {0, 1, 2}, {0, 2}, {1, 2}, or {4, 5} cannot
+ *			be attached simulataneously. {0x7, 0} is equivalent to
+ *			{0x3, 0x6, 0x5, 0}. If it is {0xFFFFFFFF, 0}, there
+ *			can be no simultaneous connections.
+ * @dev:		Device of this extcon.
+ * @state:		Attach/detach state of this extcon. Do not provide at
+ *			register-time.
+ * @nh:			Notifier for the state change events from this extcon
+ * @entry:		To support list of extcon devices so that users can
+ *			search for extcon devices based on the extcon name.
+ * @lock:
+ * @max_supported:	Internal value to store the number of cables.
+ * @extcon_dev_type:	Device_type struct to provide attribute_groups
+ *			customized for each extcon device.
+ * @cables:		Sysfs subdirectories. Each represents one cable.
+ *
+ * In most cases, users only need to provide "User initializing data" of
+ * this struct when registering an extcon. In some exceptional cases,
+ * optional callbacks may be needed. However, the values in "internal data"
+ * are overwritten by register function.
+ */
+struct extcon_dev {
+	/* Optional user initializing data */
+	const char *name;
+	const unsigned int *supported_cable;
+	const u32 *mutually_exclusive;
+
+	/* Internal data. Please do not set. */
+	struct device dev;
+	struct raw_notifier_head *nh;
+	struct blocking_notifier_head *bnh;
+	struct list_head entry;
+	int max_supported;
+	spinlock_t lock;	/* could be called by irq handler */
+	u32 state;
+
+	/* /sys/class/extcon/.../cable.n/... */
+	struct device_type extcon_dev_type;
+	struct extcon_cable *cables;
+
+	/* /sys/class/extcon/.../mutually_exclusive/... */
+	struct attribute_group attr_g_muex;
+	struct attribute **attrs_muex;
+	struct device_attribute *d_attrs_muex;
+};
 
 #if IS_ENABLED(CONFIG_EXTCON)
 /*
@@ -184,7 +242,8 @@ struct extcon_dev;
  * The 'id' argument indicates the defined external connector.
  */
 extern int extcon_get_state(struct extcon_dev *edev, unsigned int id);
-
+extern int devm_extcon_dev_register(struct device *dev,
+				    struct extcon_dev *edev);
 /*
  * Following APIs get the property of each external connector.
  * The 'id' argument indicates the defined external connector
@@ -250,13 +309,52 @@ extern struct extcon_dev *extcon_get_extcon_dev(const char *extcon_name);
 extern struct extcon_dev *extcon_find_edev_by_node(struct device_node *node);
 extern struct extcon_dev *extcon_get_edev_by_phandle(struct device *dev,
 						     int index);
+/*
+ * get/set_state access each bit of the 32b encoded state value.
+ * They are used to access the status of each cable based on the cable id.
+ */
+extern int extcon_get_state(struct extcon_dev *edev, unsigned int id);
+extern int extcon_set_state(struct extcon_dev *edev, unsigned int id,
+				   bool cable_state);
+extern int extcon_set_state_sync(struct extcon_dev *edev, unsigned int id,
+				bool cable_state);
+extern struct extcon_dev *devm_extcon_dev_allocate(struct device *dev,
+						   const unsigned int *cable);
+/*
+ * get/set_property access the property value of each external connector.
+ * They are used to access the property of each cable based on the property id.
+ */
+extern int extcon_get_property(struct extcon_dev *edev, unsigned int id,
+				unsigned int prop,
+				union extcon_property_value *prop_val);
+extern int extcon_set_property(struct extcon_dev *edev, unsigned int id,
+				unsigned int prop,
+				union extcon_property_value prop_val);
+extern int extcon_set_property_sync(struct extcon_dev *edev, unsigned int id,
+				unsigned int prop,
+				union extcon_property_value prop_val);
 
+/*
+ *
 /* Following API get the name of extcon device. */
 extern const char *extcon_get_edev_name(struct extcon_dev *edev);
 
 extern int extcon_blocking_sync(struct extcon_dev *edev, unsigned int id,
 							u8 val);
 #else /* CONFIG_EXTCON */
+static inline struct extcon_dev *devm_extcon_dev_allocate(struct device *dev,
+						const unsigned int *cable)
+{
+	return ERR_PTR(-ENOSYS);
+}
+
+
+static inline int devm_extcon_dev_register(struct device *dev,
+					   struct extcon_dev *edev)
+{
+	return -EINVAL;
+}
+
 static inline int extcon_get_state(struct extcon_dev *edev, unsigned int id)
 {
 	return 0;
@@ -332,6 +430,22 @@ static inline struct extcon_dev *extcon_get_edev_by_phandle(struct device *dev,
 {
 	return ERR_PTR(-ENODEV);
 }
+
+
+static inline int extcon_set_property(struct extcon_dev *edev, unsigned int id,
+					unsigned int prop,
+					union extcon_property_value prop_val)
+{
+	return 0;
+}
+
+static inline int extcon_set_property_sync(struct extcon_dev *edev,
+					unsigned int id, unsigned int prop,
+					union extcon_property_value prop_val)
+{
+	return 0;
+}
+
 #endif /* CONFIG_EXTCON */
 
 /*
@@ -355,5 +469,16 @@ static inline int extcon_register_interest(struct extcon_specific_cable_nb *obj,
 static inline int extcon_unregister_interest(struct extcon_specific_cable_nb *obj)
 {
 	return -EINVAL;
+}
+
+static inline int extcon_get_cable_state_(struct extcon_dev *edev, unsigned int id)
+{
+	return extcon_get_state(edev, id);
+}
+
+static inline int extcon_set_cable_state_(struct extcon_dev *edev, unsigned int id,
+				   bool cable_state)
+{
+	return extcon_set_state_sync(edev, id, cable_state);
 }
 #endif /* __LINUX_EXTCON_H__ */
