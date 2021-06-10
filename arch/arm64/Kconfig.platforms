@@ -247,15 +247,6 @@ config ARCH_SDM429
 	  This enables support for the sdm429 chipset. If you do not
 	  wish to build a kernel that runs on this chipset, say 'N' here.
 
-config ARCH_MSM8937
-	bool "Enable Support for Qualcomm Technologies Inc. MSM8937"
-	depends on ARCH_QCOM
-	select CPU_FREQ_QCOM
-	select COMMON_CLK_MSM
-	help
-	  This enables support for the MSM8937 chipset. If you do not
-	  wish to build a kernel that runs on this chipset, say 'N' here.
-	  
 config ARCH_SDM439
 	bool "Enable Support for Qualcomm Technologies Inc. SDM439"
 	depends on ARCH_QCOM
