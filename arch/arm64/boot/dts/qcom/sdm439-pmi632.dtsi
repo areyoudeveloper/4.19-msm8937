@@ -43,11 +43,6 @@
 	qcom,battery-data = <&mtp_batterydata>;
 };
 
-&pmi632_vadc {
-	pinctrl-names = "default";
-	pinctrl-0 = <&quiet_therm_default &smb_therm_default>;
-};
-
 &pmi632_gpios {
 	quiet_therm {
 		quiet_therm_default: quiet_therm_default {
