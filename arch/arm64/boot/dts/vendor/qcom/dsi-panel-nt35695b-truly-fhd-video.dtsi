@@ -1,30 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* Copyright (c) 2017, The Linux Foundation. All rights reserved.
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 and
- * only version 2 as published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- */
-
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 &mdss_mdp {
 	dsi_nt35695b_truly_fhd_video: qcom,mdss_dsi_nt35695b_truly_fhd_video {
 		qcom,mdss-dsi-panel-name =
 				"nt35695b truly fhd video mode dsi panel";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 
 		qcom,dsi-ctrl-num = <0>;
 		qcom,dsi-phy-num = <0>;
@@ -32,11 +10,6 @@
 		qcom,dsi-sec-ctrl-num = <1>;
 		qcom,dsi-sec-phy-num = <1>;
 
-<<<<<<< HEAD
-=======
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		qcom,mdss-dsi-virtual-channel-id = <0>;
 		qcom,mdss-dsi-stream = <0>;
 		qcom,mdss-dsi-bpp = <24>;
@@ -49,8 +22,6 @@
 		qcom,mdss-dsi-lane-1-state;
 		qcom,mdss-dsi-lane-2-state;
 		qcom,mdss-dsi-lane-3-state;
-<<<<<<< HEAD
-<<<<<<< HEAD
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
 		qcom,mdss-dsi-reset-sequence = <1 10>, <0 10>, <1 10>;
@@ -59,24 +30,6 @@
 
 		qcom,mdss-dsi-display-timings {
 			timing@0 {
-=======
-		qcom,mdss-dsi-bl-min-level = <1>;
-		qcom,mdss-dsi-bl-max-level = <4095>;
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
-		qcom,mdss-dsi-dma-trigger = "trigger_sw";
-		qcom,mdss-dsi-mdp-trigger = "none";
-		qcom,mdss-dsi-reset-sequence = <1 10>, <0 10>, <1 10>;
-		qcom,mdss-dsi-tx-eot-append;
-		qcom,mdss-dsi-post-init-delay = <1>;
-
-		qcom,mdss-dsi-display-timings {
-<<<<<<< HEAD
-			timing@0{
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
-			timing@0 {
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				qcom,mdss-dsi-panel-width = <1080>;
 				qcom,mdss-dsi-panel-height = <1920>;
 				qcom,mdss-dsi-h-front-porch = <120>;
@@ -220,14 +173,6 @@
 					02 10 00];
 				qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
 				qcom,mdss-dsi-off-command-state = "dsi_lp_mode";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-				qcom,mdss-dsi-panel-timings = [e6 38 26 00
-					68 6e 2a 3c 44 03 04 00];
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			};
 		};
 	};

@@ -1,31 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* Copyright (c) 2018, The Linux Foundation. All rights reserved.
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 and
- * only version 2 as published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- */
-
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 &soc {
 	msm_bus: qcom,kgsl-busmon {
 		label = "kgsl-busmon";
 		compatible = "qcom,kgsl-busmon";
 	};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 	gpu_bw_tbl: gpu-bw-tbl {
 		compatible = "operating-points-v2";
 		opp-0    { opp-hz = /bits/ 64 < 0 >;     }; /* OFF */
@@ -51,47 +29,17 @@
 		opp-1843 { opp-hz = /bits/ 64 < 7031 >;  }; /* 10. 1843 MHz */
 	};
 
-<<<<<<< HEAD
-=======
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 	gpubw: qcom,gpubw {
 		compatible = "qcom,devbw";
 		governor = "bw_vbif";
 		qcom,src-dst-ports = <26 512>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 		operating-points-v2 = <&gpu_bw_tbl>;
-=======
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
-		operating-points-v2 = <&gpu_bw_tbl>;
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		/*
 		 * active-only flag is used while registering the bus
 		 * governor.It helps release the bus vote when the CPU
 		 * subsystem is inactiv3
 		 */
 		qcom,active-only;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-		qcom,bw-tbl =
-			< 0    >, /*  off */
-			<  769 >, /* 1. DDR:100.80 MHz BIMC: 50.40 MHz */
-			< 1611 >, /* 2. DDR:211.20 MHz BIMC: 105.60 MHz */
-			< 2124 >, /* 3. DDR:278.40 MHz BIMC: 139.20 MHz */
-			< 2929 >, /* 4. DDR:384.00 MHz BIMC: 192.00 MHz */
-			< 4101 >, /* 5. DDR:537.60 MHz BIMC: 268.80 MHz */
-			< 4248 >, /* 6. DDR:556.80 MHz BIMC: 278.40 MHz */
-			< 5346 >, /* 7. DDR:662.40 MHz BIMC: 331.20 MHz */
-			< 5712 >, /* 8. DDR:748.80 MHz BIMC: 374.40 MHz */
-			< 6152 >, /* 9. DDR:806.40 MHz BIMC: 403.20 MHz */
-			< 7031 >; /* 10. DDR:921.60 MHz BIMC: 460.80 MHz */
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 	};
 
 	msm_gpu: qcom,kgsl-3d0@1c00000 {
@@ -101,15 +49,7 @@
 		reg = <0x1c00000 0x40000
 		       0xa0000 0x6fff>;
 		reg-names = "kgsl_3d0_reg_memory", "qfprom_memory";
-<<<<<<< HEAD
-<<<<<<< HEAD
 		interrupts = <0 33 IRQ_TYPE_LEVEL_HIGH>;
-=======
-		interrupts = <0 33 0>;
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
-		interrupts = <0 33 IRQ_TYPE_LEVEL_HIGH>;
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		interrupt-names = "kgsl_3d0_irq";
 		qcom,id = <0>;
 		qcom,chipid = <0x05000500>;
@@ -123,27 +63,12 @@
 
 		qcom,snapshot-size = <1048576>; //bytes
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 		clocks = <&gcc GCC_OXILI_GFX3D_CLK>,
 			<&gcc GCC_OXILI_AHB_CLK>,
 			<&gcc GCC_BIMC_GFX_CLK>,
 			<&gcc GCC_BIMC_GPU_CLK>,
 			<&gcc GCC_OXILI_TIMER_CLK>,
 			<&gcc GCC_OXILI_AON_CLK>;
-<<<<<<< HEAD
-=======
-		clocks = <&clock_gcc clk_gcc_oxili_gfx3d_clk>,
-			<&clock_gcc clk_gcc_oxili_ahb_clk>,
-			<&clock_gcc clk_gcc_bimc_gfx_clk>,
-			<&clock_gcc clk_gcc_bimc_gpu_clk>,
-			<&clock_gcc clk_gcc_oxili_timer_clk>,
-			<&clock_gcc clk_gcc_oxili_aon_clk>;
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 
 		clock-names = "core_clk", "iface_clk",
 			      "mem_iface_clk", "alt_mem_iface_clk",
@@ -303,23 +228,9 @@
 		compatible = "qcom,kgsl-smmu-v2";
 
 		reg = <0x1c40000 0x10000>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 		clocks = <&gcc GCC_OXILI_AHB_CLK>,
 			 <&gcc GCC_BIMC_GFX_CLK>;
-=======
-		qcom,protect = <0x40000 0x10000>;
-		qcom,micro-mmu-control = <0x6000>;
-
-		clocks = <&clock_gcc clk_gcc_oxili_ahb_clk>,
-			 <&clock_gcc clk_gcc_bimc_gfx_clk>;
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
-
-		clocks = <&gcc GCC_OXILI_AHB_CLK>,
-			 <&gcc GCC_BIMC_GFX_CLK>;
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 
 		clock-names = "gpu_ahb_clk", "gcc_bimc_gfx_clk";
 
@@ -329,14 +240,7 @@
 			compatible = "qcom,smmu-kgsl-cb";
 			label = "gfx3d_user";
 			iommus = <&kgsl_smmu 0>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 			qcom,iommu-dma = "disabled";
-=======
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
-			qcom,iommu-dma = "disabled";
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 			qcom,gpu-offset = <0x48000>;
 		};
 	};

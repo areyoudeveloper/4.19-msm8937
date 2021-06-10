@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* Copyright (c) 2015-2018, The Linux Foundation. All rights reserved.
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 and
- * only version 2 as published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- */
-
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 #include <dt-bindings/msm/pm.h>
 
 &soc {
@@ -51,8 +33,6 @@
 			qcom,psci-mode-shift = <8>;
 			qcom,psci-mode-mask = <0xf>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 			qcom,pm-cluster-level@0 {
 				reg = <0>;
 				label = "system-active";
@@ -82,53 +62,10 @@
 				qcom,entry-latency-us = <640>;
 				qcom,exit-latency-us = <900>;
 				qcom,min-residency-us = <1250>;
-=======
-			qcom,pm-cluster-level@0{
-=======
-			qcom,pm-cluster-level@0 {
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
-				reg = <0>;
-				label = "system-active";
-				qcom,psci-mode = <0>;
-				/* TBD */
-				qcom,entry-latency-us = <640>;
-				qcom,exit-latency-us = <415>;
-				qcom,min-residency-us = <980>;
-			};
-
-			qcom,pm-cluster-level@1 {
-				reg = <1>;
-				label = "system-wfi";
-				qcom,psci-mode = <1>;
-				/* TBD */
-				qcom,entry-latency-us = <38>;
-				qcom,exit-latency-us = <475>;
-				qcom,min-residency-us = <1050>;
-				qcom,min-child-idx = <1>;
-			};
-
-			qcom,pm-cluster-level@2 {
-				reg = <2>;
-				label = "system-ret";
-				qcom,psci-mode = <2>;
-<<<<<<< HEAD
-				qcom,latency-us = <900>;
-				qcom,ss-power = <320>;
-				qcom,energy-overhead = <918687>;
-				qcom,time-overhead = <1250>;
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
-				/* TBD */
-				qcom,entry-latency-us = <640>;
-				qcom,exit-latency-us = <900>;
-				qcom,min-residency-us = <1250>;
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				qcom,min-child-idx = <1>;
 				qcom,reset-level = <LPM_RESET_LVL_RET>;
 			};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 			qcom,pm-cluster-level@3 {
 				reg = <3>;
 				label = "system-pc";
@@ -137,41 +74,13 @@
 				qcom,entry-latency-us = <800>;
 				qcom,exit-latency-us = <10782>;
 				qcom,min-residency-us = <1426>;
-=======
-			qcom,pm-cluster-level@3{
-				reg = <3>;
-				label = "system-pc";
-				qcom,psci-mode = <3>;
-				qcom,latency-us = <10782>;
-				qcom,ss-power = <306>;
-				qcom,energy-overhead = <1060040>;
-				qcom,time-overhead = <1426>;
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
-			qcom,pm-cluster-level@3 {
-				reg = <3>;
-				label = "system-pc";
-				qcom,psci-mode = <3>;
-				/* TBD */
-				qcom,entry-latency-us = <800>;
-				qcom,exit-latency-us = <10782>;
-				qcom,min-residency-us = <1426>;
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				qcom,min-child-idx = <2>;
 				qcom,notify-rpm;
 				qcom,is-reset;
 				qcom,reset-level = <LPM_RESET_LVL_PC>;
 			};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 			qcom,pm-cluster@0 {
-=======
-			qcom,pm-cluster@0{
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
-			qcom,pm-cluster@0 {
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				reg = <0>;
 				#address-cells = <1>;
 				#size-cells = <0>;
@@ -179,8 +88,6 @@
 				qcom,psci-mode-shift = <4>;
 				qcom,psci-mode-mask = <0xf>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 				qcom,pm-cluster-level@0 {
 					reg = <0>;
 					label = "perf-l2-wfi";
@@ -199,42 +106,10 @@
 					qcom,entry-latency-us = <640>;
 					qcom,exit-latency-us = <267>;
 					qcom,min-residency-us = <627>;
-=======
-				qcom,pm-cluster-level@0{
-=======
-				qcom,pm-cluster-level@0 {
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
-					reg = <0>;
-					label = "perf-l2-wfi";
-					qcom,psci-mode = <1>;
-					/* TBD */
-					qcom,entry-latency-us = <38>;
-					qcom,exit-latency-us = <210>;
-					qcom,min-residency-us = <326>;
-				};
-
-				qcom,pm-cluster-level@1 {
-					reg = <1>;
-					label = "perf-l2-gdhs";
-					qcom,psci-mode = <4>;
-<<<<<<< HEAD
-					qcom,latency-us = <267>;
-					qcom,ss-power = <435>;
-					qcom,energy-overhead = <388012>;
-					qcom,time-overhead = <627>;
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
-					/* TBD */
-					qcom,entry-latency-us = <640>;
-					qcom,exit-latency-us = <267>;
-					qcom,min-residency-us = <627>;
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 					qcom,min-child-idx = <1>;
 					qcom,reset-level = <LPM_RESET_LVL_GDHS>;
 				};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 				qcom,pm-cluster-level@2 {
 					reg = <2>;
 					label = "perf-l2-pc";
@@ -243,26 +118,6 @@
 					qcom,entry-latency-us = <800>;
 					qcom,exit-latency-us = <305>;
 					qcom,min-residency-us = <879>;
-=======
-				qcom,pm-cluster-level@2{
-					reg = <2>;
-					label = "perf-l2-pc";
-					qcom,psci-mode = <5>;
-					qcom,latency-us = <305>;
-					qcom,ss-power = <405>;
-					qcom,energy-overhead = <564794>;
-					qcom,time-overhead = <879>;
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
-				qcom,pm-cluster-level@2 {
-					reg = <2>;
-					label = "perf-l2-pc";
-					qcom,psci-mode = <5>;
-					/* TBD */
-					qcom,entry-latency-us = <800>;
-					qcom,exit-latency-us = <305>;
-					qcom,min-residency-us = <879>;
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 					qcom,min-child-idx = <1>;
 					qcom,is-reset;
 					qcom,reset-level = <LPM_RESET_LVL_PC>;
@@ -279,46 +134,20 @@
 						reg = <0>;
 						qcom,psci-cpu-mode = <0>;
 						label = "wfi";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 						/* TBD */
 						qcom,entry-latency-us = <49>;
 						qcom,exit-latency-us = <1>;
 						qcom,min-residency-us = <67>;
-<<<<<<< HEAD
-=======
-						qcom,latency-us = <1>;
-						qcom,ss-power = <530>;
-						qcom,energy-overhead = <62806>;
-						qcom,time-overhead = <67>;
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 					};
 
 					qcom,pm-cpu-level@1 {
 						reg = <1>;
 						qcom,psci-cpu-mode = <3>;
 						label = "pc";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 						/* TBD */
 						qcom,entry-latency-us = <290>;
 						qcom,exit-latency-us = <190>;
 						qcom,min-residency-us = <326>;
-<<<<<<< HEAD
-=======
-						qcom,latency-us = <190>;
-						qcom,ss-power = <472>;
-						qcom,energy-overhead = <233383>;
-						qcom,time-overhead = <326>;
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 						qcom,use-broadcast-timer;
 						qcom,is-reset;
 						qcom,reset-level =
@@ -327,15 +156,7 @@
 				};
 			};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 			qcom,pm-cluster@1 {
-=======
-			qcom,pm-cluster@1{
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
-			qcom,pm-cluster@1 {
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 				reg = <1>;
 				#address-cells = <1>;
 				#size-cells = <0>;
@@ -343,8 +164,6 @@
 				qcom,psci-mode-shift = <4>;
 				qcom,psci-mode-mask = <0xf>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 				qcom,pm-cluster-level@0 {
 					reg = <0>;
 					label = "pwr-l2-wfi";
@@ -363,43 +182,11 @@
 					qcom,entry-latency-us = <640>;
 					qcom,exit-latency-us = <337>;
 					qcom,min-residency-us = <717>;
-=======
-				qcom,pm-cluster-level@0{
-=======
-				qcom,pm-cluster-level@0 {
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
-					reg = <0>;
-					label = "pwr-l2-wfi";
-					qcom,psci-mode = <1>;
-					/* TBD */
-					qcom,entry-latency-us = <38>;
-					qcom,exit-latency-us = <221>;
-					qcom,min-residency-us = <400>;
-				};
-
-				qcom,pm-cluster-level@1 {
-					reg = <1>;
-					label = "pwr-l2-gdhs";
-					qcom,psci-mode = <4>;
-<<<<<<< HEAD
-					qcom,latency-us = <337>;
-					qcom,ss-power = <433>;
-					qcom,energy-overhead = <372429>;
-					qcom,time-overhead = <717>;
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
-					/* TBD */
-					qcom,entry-latency-us = <640>;
-					qcom,exit-latency-us = <337>;
-					qcom,min-residency-us = <717>;
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 					qcom,min-child-idx = <1>;
 					qcom,reset-level =
 						<LPM_RESET_LVL_GDHS>;
 				};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 				qcom,pm-cluster-level@2 {
 					reg = <2>;
 					label = "pwr-l2-pc";
@@ -408,26 +195,6 @@
 					qcom,entry-latency-us = <800>;
 					qcom,exit-latency-us = <415>;
 					qcom,min-residency-us = <980>;
-=======
-				qcom,pm-cluster-level@2{
-					reg = <2>;
-					label = "pwr-l2-pc";
-					qcom,psci-mode = <5>;
-					qcom,latency-us = <415>;
-					qcom,ss-power = <405>;
-					qcom,energy-overhead = <558549>;
-					qcom,time-overhead = <980>;
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
-				qcom,pm-cluster-level@2 {
-					reg = <2>;
-					label = "pwr-l2-pc";
-					qcom,psci-mode = <5>;
-					/* TBD */
-					qcom,entry-latency-us = <800>;
-					qcom,exit-latency-us = <415>;
-					qcom,min-residency-us = <980>;
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 					qcom,min-child-idx = <1>;
 					qcom,is-reset;
 					qcom,reset-level =
@@ -445,46 +212,20 @@
 						reg = <0>;
 						qcom,psci-cpu-mode = <0>;
 						label = "wfi";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 						/* TBD */
 						qcom,entry-latency-us = <49>;
 						qcom,exit-latency-us = <1>;
 						qcom,min-residency-us = <57>;
-<<<<<<< HEAD
-=======
-						qcom,latency-us = <1>;
-						qcom,ss-power = <540>;
-						qcom,energy-overhead = <93024>;
-						qcom,time-overhead = <57>;
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 					};
 
 					qcom,pm-cpu-level@1 {
 						reg = <1>;
 						qcom,psci-cpu-mode = <3>;
 						label = "pc";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 						/* TBD */
 						qcom,entry-latency-us = <290>;
 						qcom,exit-latency-us = <221>;
 						qcom,min-residency-us = <400>;
-<<<<<<< HEAD
-=======
-						qcom,latency-us = <221>;
-						qcom,ss-power = <460>;
-						qcom,energy-overhead = <219499>;
-						qcom,time-overhead = <400>;
->>>>>>> b36dd155d170... dts: Import msm8937/msm8940 dtses from LA.UM.9.6.2.r1-04200-89xx.0
-=======
->>>>>>> 117385fd56ab... dts: Update msm8937 from LA.UM.9.6.3.r1-01200-89xx.0
 						qcom,use-broadcast-timer;
 						qcom,is-reset;
 						qcom,reset-level =
