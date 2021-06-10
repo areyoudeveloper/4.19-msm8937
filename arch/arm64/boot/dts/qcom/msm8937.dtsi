@@ -413,24 +413,16 @@
 	};
 
 	clock_gcc: qcom,gcc@1800000 {
-		#address-cells = <1>;
-		#size-cells = <1>;
-		compatible = "qcom,gcc-8937";
+                compatible = "qcom,gcc-msm8937", "syscon";
 		reg = <0x1800000 0x80000>,
-			<0xb016000 0x00040>,
-			<0xb116000 0x00040>,
-			<0x00a6018 0x00004>;
-		reg-names = "cc_base", "apcs_c1_base",
-				"apcs_c0_base", "gpu-bin";
-		qcom,gfx3d_clk_src-opp-store-vcorner = <&msm_gpu>;
-		vdd_dig-supply = <&pm8937_s2_level>;
-		vdd_sr2_dig-supply = <&pm8937_s2_level_ao>;
-		vdd_sr2_pll-supply = <&pm8937_l7_ao>;
-		vdd_hf_dig-supply = <&pm8937_s2_level_ao>;
-		vdd_hf_pll-supply = <&pm8937_l7_ao>;
+			 <0x00a6018 0x00004>;
+		reg-names = "cc_base", "gpu-bin";
+		qcom,gcc_oxili_gfx3d_clk-opp-handle = <&msm_gpu>;
+		vdd_cx-supply = <&pm8937_s2_level>;
+		clocks = <&rpmcc RPM_SMD_XO_CLK_SRC>;
+		clock-names = "bi_tcxo";
 		#clock-cells = <1>;
 		#reset-cells = <1>;
-		ranges;
 		qcom,spm@0 {
 			compatible = "qcom,gcc-spm-8937";
 			reg = <0x0b111200 0x100>,
