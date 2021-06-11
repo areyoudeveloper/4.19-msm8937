@@ -121,8 +121,8 @@
 
 		coresight-name = "coresight-funnel-right";
 
-		clocks = <&clock_gcc clk_qdss_clk>,
-			 <&clock_gcc clk_qdss_a_clk>;
+	/* clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>; */
 		clock-names = "apb_pclk";
 
 		ports {
@@ -174,8 +174,8 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti-modem-cpu0";
 
-		clocks = <&clock_gcc clk_qdss_clk>,
-			 <&clock_gcc clk_qdss_a_clk>;
+		/* clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>; */
 		clock-names = "apb_pclk";
 	};
 
@@ -188,8 +188,8 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti-modem-cpu1";
 
-		clocks = <&clock_gcc clk_qdss_clk>,
-			 <&clock_gcc clk_qdss_a_clk>;
+		/* clocks = <&clock_gcc clk_qdss_clk>,
+			 <&clock_gcc clk_qdss_a_clk>; */
 		clock-names = "apb_pclk";
 	};
 
@@ -207,8 +207,8 @@
 
 };
 
-&clock_gcc {
-	compatible = "qcom,gcc-8940";
+&gcc {
+	compatible = "qcom,gcc-msm8940";
 };
 
 &clock_debug {
@@ -236,7 +236,7 @@
 		qcom,wan-rx-ring-size = <192>; /* IPA WAN-rx-ring-size*/
 		qcom,lan-rx-ring-size = <192>; /* IPA LAN-rx-ring-size*/
 		clock-names = "core_clk";
-		clocks = <&clock_gcc clk_ipa_clk>;
+		/* clocks = <&clock_gcc clk_ipa_clk>; */
 		qcom,ee = <0>;
 		qcom,use-ipa-tethering-bridge;
 		qcom,modem-cfg-emb-pipe-flt;
