@@ -25,17 +25,17 @@
 
 &usb_otg {
 
-/*	/delete-property/ clocks;
-	clocks = <&clock_gcc clk_gcc_usb_hs_ahb_clk>,
-			 <&clock_gcc clk_gcc_usb_hs_system_clk>,
-			 <&clock_gcc clk_gcc_usb2a_phy_sleep_clk>,
-			 <&clock_gcc clk_bimc_usb_clk>,
-			 <&clock_gcc clk_snoc_usb_clk>,
-			 <&clock_gcc clk_pnoc_usb_clk>,
-			 <&clock_gcc clk_gcc_qusb2_phy_clk>,
-			 <&clock_gcc clk_gcc_usb2_hs_phy_only_clk>,
-			 <&clock_gcc clk_gcc_usb_hs_phy_cfg_ahb_clk>,
-			 <&clock_gcc clk_xo_otg_clk>; */
+	/delete-property/ clocks;
+	clocks = <&gcc clk_gcc_usb_hs_ahb_clk>,
+			 <&gcc clk_gcc_usb_hs_system_clk>,
+			 <&gcc clk_gcc_usb2a_phy_sleep_clk>,
+			 <&gcc clk_bimc_usb_clk>,
+			 <&gcc clk_snoc_usb_clk>,
+			 <&gcc clk_pnoc_usb_clk>,
+			 <&gcc clk_gcc_qusb2_phy_clk>,
+			 <&gcc clk_gcc_usb2_hs_phy_only_clk>,
+			 <&gcc clk_gcc_usb_hs_phy_cfg_ahb_clk>,
+			 <&gcc clk_xo_otg_clk>; 
 
 	qcom,usbbam@78c4000 {
 		/delete-property/ qcom,reset-bam-on-disconnect;
@@ -121,8 +121,8 @@
 
 		coresight-name = "coresight-funnel-right";
 
-	/* clocks = <&clock_gcc clk_qdss_clk>,
-			 <&clock_gcc clk_qdss_a_clk>; */
+	 clocks = <&gcc clk_qdss_clk>,
+			 <&gcc clk_qdss_a_clk>; 
 		clock-names = "apb_pclk";
 
 		ports {
@@ -174,8 +174,8 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti-modem-cpu0";
 
-		/* clocks = <&clock_gcc clk_qdss_clk>,
-			 <&clock_gcc clk_qdss_a_clk>; */
+		 clocks = <&gcc clk_qdss_clk>,
+			 <&gcc clk_qdss_a_clk>; 
 		clock-names = "apb_pclk";
 	};
 
@@ -188,8 +188,8 @@
 		reg-names = "cti-base";
 		coresight-name = "coresight-cti-modem-cpu1";
 
-		/* clocks = <&clock_gcc clk_qdss_clk>,
-			 <&clock_gcc clk_qdss_a_clk>; */
+		clocks = <&gcc clk_qdss_clk>,
+			 <&gcc clk_qdss_a_clk>; 
 		clock-names = "apb_pclk";
 	};
 
@@ -236,7 +236,7 @@
 		qcom,wan-rx-ring-size = <192>; /* IPA WAN-rx-ring-size*/
 		qcom,lan-rx-ring-size = <192>; /* IPA LAN-rx-ring-size*/
 		clock-names = "core_clk";
-		/* clocks = <&clock_gcc clk_ipa_clk>; */
+        clocks = <&clock_gcc clk_ipa_clk>; 
 		qcom,ee = <0>;
 		qcom,use-ipa-tethering-bridge;
 		qcom,modem-cfg-emb-pipe-flt;
