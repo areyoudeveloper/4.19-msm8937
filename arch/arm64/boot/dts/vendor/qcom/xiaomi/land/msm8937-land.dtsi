@@ -4,4 +4,5 @@
 #include "msm8937-land-pinctrl.dtsi"
 #include "msm8937-land-regulator.dtsi"
 #include "msm8937-land-sound.dtsi"
+#include "msm8937-land-general-soc.dtsi"
 #include "msm8937-land-spmi.dtsi"
