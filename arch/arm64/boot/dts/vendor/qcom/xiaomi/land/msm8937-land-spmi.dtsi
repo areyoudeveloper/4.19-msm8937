@@ -63,7 +63,7 @@
 		<0x53 0x80 0x32 0x81 0x07 0x82 0x13 0x83 0xffffffff>;
 };
 
-&pmi8950_charger {
+&qpnp_smbcharger {
 	qcom,qpnp-smbcharger {
 			/delete-property/qcom,float-voltage-mv;
 			qcom,thermal-mitigation = <2000 1000 800 800>;
