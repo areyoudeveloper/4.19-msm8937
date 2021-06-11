@@ -208,14 +208,14 @@
 };
 
 &gcc {
-	compatible = "qcom,gcc-msm8940";
+	compatible = "qcom,gcc-8940";
 };
 
-&clock_debug {
+&debugcc {
 	compatible = "qcom,cc-debug-8940";
 };
 
-&clock_gcc_mdss {
+&gcc_mdss {
 	compatible = "qcom,gcc-mdss-8940";
 };
 
