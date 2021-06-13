@@ -20,7 +20,7 @@
 
 #define CREATE_TRACE_POINTS
 #include <trace/events/scm.h>
-
+#define SCM_EBUSY		-55
 #define SCM_ENOMEM		-9
 #define SCM_EINVAL_ADDR		-3
 #define SCM_EINVAL_ARG		-2
@@ -48,6 +48,16 @@ DEFINE_MUTEX(scm_lmh_lock);
 #define SMC_ATOMIC_MASK 0x80000000
 #define IS_CALL_AVAIL_CMD 1
 
+#define SCM_BUF_LEN(__cmd_size, __resp_size) ({ \
+	size_t x =  __cmd_size + __resp_size; \
+	size_t y = sizeof(struct scm_command) + sizeof(struct scm_response); \
+	size_t result; \
+	if (x < __cmd_size || (x + y) < x) \
+		result = 0; \
+	else \
+		result = x + y; \
+	result; \
+	})
 #ifdef CONFIG_ARM64
 
 #define R0_STR "x0"
@@ -75,6 +85,47 @@ DEFINE_MUTEX(scm_lmh_lock);
 #define R6_STR "r6"
 
 #endif
+struct scm_command {
+	u32	len;
+	u32	buf_offset;
+	u32	resp_hdr_offset;
+	u32	id;
+	u32	buf[0];
+};
+
+struct scm_response {
+	u32	len;
+	u32	buf_offset;
+	u32	is_complete;
+};
+
+static inline struct scm_response *scm_command_to_response(
+		const struct scm_command *cmd)
+{
+	return (void *)cmd + cmd->resp_hdr_offset;
+}
+
+/**
+ * scm_get_command_buffer() - Get a pointer to a command buffer
+ * @cmd: command
+ *
+ * Returns a pointer to the command buffer of a command.
+ */
+static inline void *scm_get_command_buffer(const struct scm_command *cmd)
+{
+	return (void *)cmd->buf;
+}
+
+/**
+ * scm_get_response_buffer() - Get a pointer to a response buffer
+ * @rsp: response
+ *
+ * Returns a pointer to a response buffer of a response.
+ */
+static inline void *scm_get_response_buffer(const struct scm_response *rsp)
+{
+	return (void *)rsp + rsp->buf_offset;
+}
 
 static int scm_remap_error(int err)
 {
@@ -86,12 +137,179 @@ static int scm_remap_error(int err)
 		return -EINVAL;
 	case SCM_ENOMEM:
 		return -ENOMEM;
+    case SCM_EBUSY:
 	case SCM_V2_EBUSY:
 		return -EBUSY;
 	}
 	return -EINVAL;
 }
+static u32 smc(u32 cmd_addr)
+{
+	int context_id;
+	register u32 r0 asm(R0_STR) = 1;
+	register u32 r1 asm(R1_STR) = (uintptr_t)&context_id;
+	register u32 r2 asm(R2_STR) = cmd_addr;
+	do {
+		asm volatile(
+			__asmeq("%0", R0_STR)
+			__asmeq("%1", R0_STR)
+			__asmeq("%2", R1_STR)
+			__asmeq("%3", R2_STR)
+#ifdef REQUIRES_SEC
+			".arch_extension sec\n"
+#endif
+			"smc	#0\n"
+			: "=r" (r0)
+			: "r" (r0), "r" (r1), "r" (r2)
+			: R3_STR);
+	} while (r0 == SCM_INTERRUPTED);
 
+	return r0;
+}
+
+#ifndef CONFIG_ARM64
+static void scm_inv_range(unsigned long start, unsigned long end)
+{
+	u32 cacheline_size, ctr;
+
+	asm volatile("mrc p15, 0, %0, c0, c0, 1" : "=r" (ctr));
+	cacheline_size = 4 << ((ctr >> 16) & 0xf);
+
+	start = round_down(start, cacheline_size);
+	end = round_up(end, cacheline_size);
+	outer_inv_range(start, end);
+	while (start < end) {
+		asm ("mcr p15, 0, %0, c7, c6, 1" : : "r" (start)
+		     : "memory");
+		start += cacheline_size;
+	}
+	dsb();
+	isb();
+}
+#else
+
+static void scm_inv_range(unsigned long start, unsigned long end)
+{
+	dmac_inv_range((void *)start, (void *)end);
+}
+#endif
+
+static int __scm_call(const struct scm_command *cmd)
+{
+	int ret;
+	u32 cmd_addr = virt_to_phys(cmd);
+
+	/*
+	 * Flush the command buffer so that the secure world sees
+	 * the correct data.
+	 */
+	__cpuc_flush_dcache_area((void *)cmd, cmd->len);
+	outer_flush_range(cmd_addr, cmd_addr + cmd->len);
+
+	ret = smc(cmd_addr);
+	if (ret < 0) {
+		if (ret != SCM_EBUSY)
+			pr_err("scm_call failed with error code %d\n", ret);
+		ret = scm_remap_error(ret);
+	}
+	return ret;
+}
+
+static int scm_call_common(u32 svc_id, u32 cmd_id, const void *cmd_buf,
+				size_t cmd_len, void *resp_buf, size_t resp_len,
+				struct scm_command *scm_buf,
+				size_t scm_buf_length)
+{
+	int ret;
+	struct scm_response *rsp;
+	unsigned long start, end;
+
+	scm_buf->len = scm_buf_length;
+	scm_buf->buf_offset = offsetof(struct scm_command, buf);
+	scm_buf->resp_hdr_offset = scm_buf->buf_offset + cmd_len;
+	scm_buf->id = (svc_id << 10) | cmd_id;
+
+	if (cmd_buf)
+		memcpy(scm_get_command_buffer(scm_buf), cmd_buf, cmd_len);
+
+	mutex_lock(&scm_lock);
+	ret = __scm_call(scm_buf);
+	mutex_unlock(&scm_lock);
+	if (ret)
+		return ret;
+
+	rsp = scm_command_to_response(scm_buf);
+	start = (unsigned long)rsp;
+
+	do {
+		scm_inv_range(start, start + sizeof(*rsp));
+	} while (!rsp->is_complete);
+
+	end = (unsigned long)scm_get_response_buffer(rsp) + resp_len;
+	scm_inv_range(start, end);
+
+	if (resp_buf)
+		memcpy(resp_buf, scm_get_response_buffer(rsp), resp_len);
+
+	return ret;
+}
+
+/*
+ * Sometimes the secure world may be busy waiting for a particular resource.
+ * In those situations, it is expected that the secure world returns a special
+ * error code (SCM_EBUSY). Retry any scm_call that fails with this error code,
+ * but with a timeout in place. Also, don't move this into scm_call_common,
+ * since we want the first attempt to be the "fastpath".
+ */
+static int _scm_call_retry(u32 svc_id, u32 cmd_id, const void *cmd_buf,
+				size_t cmd_len, void *resp_buf, size_t resp_len,
+				struct scm_command *cmd,
+				size_t len)
+{
+	int ret, retry_count = 0;
+
+	do {
+		ret = scm_call_common(svc_id, cmd_id, cmd_buf, cmd_len,
+					resp_buf, resp_len, cmd, len);
+		if (ret == -EBUSY)
+			msleep(SCM_EBUSY_WAIT_MS);
+		if (retry_count == 33)
+			pr_warn("scm: secure world has been busy for 1 second!\n");
+	} while (ret == -EBUSY && (retry_count++ < SCM_EBUSY_MAX_RETRY));
+
+	if (ret == -EBUSY)
+		pr_err("scm: secure world busy (rc = SCM_EBUSY)\n");
+
+	return ret;
+}
+
+/**
+ * scm_call_noalloc - Send an SCM command
+ *
+ * Same as scm_call except clients pass in a buffer (@scm_buf) to be used for
+ * scm internal structures. The buffer should be allocated with
+ * DEFINE_SCM_BUFFER to account for the proper alignment and size.
+ */
+int scm_call_noalloc(u32 svc_id, u32 cmd_id, const void *cmd_buf,
+		size_t cmd_len, void *resp_buf, size_t resp_len,
+		void *scm_buf, size_t scm_buf_len)
+{
+	int ret;
+	size_t len = SCM_BUF_LEN(cmd_len, resp_len);
+
+	if (len == 0)
+		return -EINVAL;
+
+	if (!IS_ALIGNED((unsigned long)scm_buf, PAGE_SIZE))
+		return -EINVAL;
+
+	memset(scm_buf, 0, scm_buf_len);
+
+	ret = scm_call_common(svc_id, cmd_id, cmd_buf, cmd_len, resp_buf,
+				resp_len, scm_buf, len);
+	return ret;
+
+}
 #ifdef CONFIG_ARM64
 
 static int __scm_call_armv8_64(u64 x0, u64 x1, u64 x2, u64 x3, u64 x4, u64 x5,
@@ -496,6 +714,30 @@ int scm_call2_atomic(u32 fn_id, struct scm_desc *desc)
 	return ret;
 }
 EXPORT_SYMBOL(scm_call2_atomic);
+
+int scm_call(u32 svc_id, u32 cmd_id, const void *cmd_buf, size_t cmd_len,
+		void *resp_buf, size_t resp_len)
+{
+	struct scm_command *cmd;
+	int ret;
+	size_t len = SCM_BUF_LEN(cmd_len, resp_len);
+
+	if (len == 0 || PAGE_ALIGN(len) < len)
+		return -EINVAL;
+
+	cmd = kzalloc(PAGE_ALIGN(len), GFP_KERNEL);
+	if (!cmd)
+		return -ENOMEM;
+
+	ret = scm_call_common(svc_id, cmd_id, cmd_buf, cmd_len, resp_buf,
+				resp_len, cmd, len);
+	if (unlikely(ret == -EBUSY))
+		ret = _scm_call_retry(svc_id, cmd_id, cmd_buf, cmd_len,
+				      resp_buf, resp_len, cmd, PAGE_ALIGN(len));
+	kfree(cmd);
+	return ret;
+}
+EXPORT_SYMBOL(scm_call);
 
 u32 scm_get_version(void)
 {

@@ -126,8 +126,8 @@ static inline void check_object_size(const void *ptr, unsigned long n,
 
 extern void __compiletime_error("copy source size is too small")
 __bad_copy_from(void);
-extern void __compiletime_error("copy destination size is too small")
-__bad_copy_to(void);
+/* extern void __compiletime_error("copy destination size is too small")
+__bad_copy_to(void); */
 
 static inline void copy_overflow(int size, unsigned long count)
 {
@@ -143,8 +143,8 @@ check_copy_size(const void *addr, size_t bytes, bool is_source)
 			copy_overflow(sz, bytes);
 		else if (is_source)
 			__bad_copy_from();
-		else
-			__bad_copy_to();
+		/* else
+			__bad_copy_to(); */
 		return false;
 	}
 	check_object_size(addr, bytes, is_source);

@@ -95,6 +95,8 @@ struct scm_desc {
 #ifdef CONFIG_QCOM_SCM
 
 #define SCM_VERSION(major, minor) (((major) << 16) | ((minor) & 0xFF))
+extern int scm_call(u32 svc_id, u32 cmd_id, const void *cmd_buf, size_t cmd_len,
+		void *resp_buf, size_t resp_len);
 extern int scm_call2(u32 cmd_id, struct scm_desc *desc);
 extern int scm_call2_noretry(u32 cmd_id, struct scm_desc *desc);
 extern int scm_call2_atomic(u32 cmd_id, struct scm_desc *desc);
@@ -110,6 +112,11 @@ extern bool is_scm_armv8(void);
 extern struct mutex scm_lmh_lock;
 
 #else
+static inline int scm_call(u32 svc_id, u32 cmd_id, const void *cmd_buf,
+		size_t cmd_len, void *resp_buf, size_t resp_len)
+{
+	return 0;
+}
 
 static inline int scm_call2(u32 cmd_id, struct scm_desc *desc)
 {
