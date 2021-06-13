@@ -30,7 +30,7 @@
 	};
 };
 
-&qpnp_smbcharger {
+&pmi8950_charger {
 	qcom,battery-data = <&qrd_batterydata>;
 	qcom,float-voltage-mv = <4400>;
 	qcom,chg-led-sw-controls;
@@ -38,7 +38,12 @@
 	status = "okay";
 };
 
-&qpnp_fg {
+&usb_otg {
+	qcom,hsusb-otg-phy-init-seq =
+		<0x39 0x81 0x37 0x82 0xffffffff>;
+};
+
+&pmi8950_fg {
 	qcom,battery-data = <&qrd_batterydata>;
 	qcom,cold-bat-decidegc = <(-100)>;
 	qcom,cool-bat-decidegc = <(-100)>;

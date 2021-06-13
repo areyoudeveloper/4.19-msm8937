@@ -17,9 +17,10 @@
 &soc {
 	gpio_keys {
 		compatible = "gpio-keys";
-		label = "gpio-keys";
-		pinctrl-names = "default";
+		input-name = "gpio-keys";
+		pinctrl-names = "tlmm_gpio_key_active","tlmm_gpio_key_suspend";
 		pinctrl-0 = <&gpio_key_active>;
+		pinctrl-1 = <&gpio_key_suspend>;
 
 		vol_up {
 			label = "volume_up";
@@ -27,8 +28,6 @@
 			linux,input-type = <1>;
 			linux,code = <115>;
 			debounce-interval = <15>;
-			linux,can-disable;
-			gpio-key,wakeup;
 		};
 	};
 };
@@ -39,16 +38,29 @@
 
 &int_codec {
 	status = "okay";
-
 	qcom,msm-mbhc-hphl-swh = <1>;
-	/delete-property/ qcom,cdc-us-euro-gpios;
+	qcom,msm-gpios =
+		"pri_i2s";
+	qcom,pinctrl-names =
+		"all_off",
+		"pri_i2s_act";
+	pinctrl-names =
+		"all_off",
+		"pri_i2s_act";
+	pinctrl-0 = <&cdc_pdm_lines_sus &cdc_pdm_lines_2_sus>;
+	pinctrl-1 = <&cdc_pdm_lines_act &cdc_pdm_lines_2_act>;
+	qcom,cdc-us-euro-gpios;
 	qcom,msm-hs-micbias-type = "internal";
-
-	/delete-property/ asoc-wsa-codec-names;
-	/delete-property/ asoc-wsa-codec-prefixes;
-	/delete-property/ msm-vdd-wsa-switch-supply;
-	/delete-property/ qcom,msm-vdd-wsa-switch-voltage;
-	/delete-property/ qcom,msm-vdd-wsa-switch-current;
+	qcom,audio-routing =
+		"RX_BIAS", "MCLK",
+		"SPK_RX_BIAS", "MCLK",
+		"INT_LDO_H", "MCLK",
+		"MIC BIAS External", "Handset Mic",
+		"MIC BIAS Internal2", "Headset Mic",
+		"MIC BIAS External", "Secondary Mic",
+		"AMIC1", "MIC BIAS External",
+		"AMIC2", "MIC BIAS Internal2",
+		"AMIC3", "MIC BIAS External";
 };
 
 
@@ -58,34 +70,6 @@
 
 &pmic_analog_codec {
 	status = "okay";
-};
-
-&wsa881x_i2c_f {
-        status = "disabled";
-};
-
-&wsa881x_i2c_45 {
-        status = "disabled";
-};
-
-&wsa881x_analog_vi_gpio {
-        status = "disabled";
-};
-
-&wsa881x_analog_clk_gpio {
-        status = "disabled";
-};
-
-&wsa881x_analog_reset_gpio {
-        status = "disabled";
-};
-
-&qpnp_smbcharger {
-	dpdm-supply = <&usb_otg>;
-};
-
-&usb_otg {
-	extcon = <&qpnp_smbcharger>;
 };
 
 &blsp1_uart2 {
@@ -134,6 +118,15 @@
 	pinctrl-0 = <&sdc2_clk_on &sdc2_cmd_on &sdc2_data_on &sdc2_cd_on>;
 	pinctrl-1 = <&sdc2_clk_off &sdc2_cmd_off &sdc2_data_off &sdc2_cd_off>;
 
+	#address-cells = <0>;
+	interrupt-parent = <&sdhc_2>;
+	interrupts = <0 1 2>;
+	#interrupt-cells = <1>;
+	interrupt-map-mask = <0xffffffff>;
+	interrupt-map = <0 &intc 0 125 0
+		1 &intc 0 221 0
+		2 &tlmm 67 0>;
+	interrupt-names = "hc_irq", "pwr_irq", "status_irq";
 	cd-gpios = <&tlmm 67 0x1>;
 
 	qcom,clk-rates = <400000 20000000 25000000 50000000 100000000
@@ -158,7 +151,7 @@
 		pinctrl-names = "nfc_active", "nfc_suspend";
 		pinctrl-0 = <&nfc_int_active &nfc_disable_active>;
 		pinctrl-1 = <&nfc_int_suspend &nfc_disable_suspend>;
-		clocks = <&gcc clk_bb_clk2_pin>;
+		clocks = <&clock_gcc clk_bb_clk2_pin>;
 		clock-names = "ref_clk";
 	};
 };
@@ -178,8 +171,4 @@
 
 &pm8937_vadc {
 	/delete-node/ chan@11;
-};
-
-&thermal_zones {
-	/delete-node/ pa-therm1-adc;
 };
